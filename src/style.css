@@ -1,0 +1,125 @@
+
+.general-user-options{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+
+}
+
+img {
+  width:20px;
+  height:20px;
+}
+
+h1{
+  font-size: 7rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h2{
+  font-size: 2rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h4{
+  font-size: 1rem;
+  text-align: center;
+  font-family: sans-serif;
+  color: gray;
+}
+
+span{
+  font-size:  1.5rem;
+}
+
+section{
+  font-size: 2rem;
+  text-align: left;
+  font-family: sans-serif;
+  color: gray;
+  display: block;
+}
+
+#user-message{
+  display: block;
+  margin: 100px;
+  width: 300px;
+  height: 313px;
+  padding: 20px;
+  float:left;
+}
+
+#user-key-number{
+  display:center;
+  margin: 0px;
+  width: 300px;
+  height: 313px;
+  padding: 20px;
+  float:left;
+}
+
+#user-options{
+  margin: 50px;
+  width: 300px;
+  height: 313px;
+  padding: 20px;
+  float:left;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 300px;
+    height: 50px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#cifrar-button {
+    background-color: #FF4500;
+    margin: 20px;
+    color: white;
+    border: 2px solid #FF4500;
+}
+
+#cifrar-button:hover {
+    background-color: white;
+    color: black;
+}
+
+#descifrar-button {
+    background-color: #FFD700;
+    margin: 20px;
+    color: black;
+    border: 2px solid #FFD700;
+}
+
+#descifrar-button:hover {
+    background-color: white;
+    color: black;
+}
+
+#erase {
+    background-color: #000066;
+    margin: 20px;
+    color: white;
+    border: 2px solid #000066;
+}
+
+#erase:hover {
+    background-color: white;
+    color: black;
+}
