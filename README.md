@@ -1,8 +1,12 @@
 # Cifrado César
 
-Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio César lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
+Enigma 2.0 es una sistema de cifrado basado en el metodo de[cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher), nombrado así por el emperador romano Julio Césa, quien lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
 
 ![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
+
+## Lean Canvas
+
+Para iniciar se 
 
 El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es un tipo de cifrado por sustitución, es decir que cada letra del texto original es reemplazada por otra que se encuentra un número fijo de posiciones (desplazamiento) más adelante en el mismo alfabeto.
 
@@ -219,7 +223,7 @@ para ver la descripción detallada de cada _habilidad_ y cada _nivel_. Esta es u
    también). Si usas Windows puedes usar [Git bash](https://git-scm.com/download/win),
    aunque recomendaría que consideres probar :penguin: GNU/Linux.
 3. Haz tu propio :fork_and_knife: [fork](https://help.github.com/articles/fork-a-repo/)
-   del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo y te 
+   del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo y te
    darán acceso de lectura en ese repo.
 4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
    tu _fork_ a tu computadora (copia local).
