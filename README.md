@@ -1,4 +1,4 @@
-# Cifrado César
+# Enigma 2.0
 
 Enigma 2.0 es una sistema de cifrado basado en el metodo de[cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher), nombrado así por el emperador romano Julio Césa, quien lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
 
