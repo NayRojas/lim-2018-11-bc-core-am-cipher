@@ -1,23 +1,9 @@
-//Caputaramos los inputs del DOM
+//Caputaramos los inputs y variables del DOM
 
-/*let userMessage = document.getElementById('message');
-let userKey = document.getElementById('offset');
-let cifrarButton = document.getElementById('cifrar-button');
+//*****************EVENTO PARA BOTON CIFRAR*****************************
+//incluir alertas de inputs
 
-//Acciono con el botón con el valor de las variables
-cifrarButton.addEventListener('click', () => {
-	let message = userMessage.value;
-	let key = userKey.value;
+//*****************EVENTO PARA BOTON DESCIFRAR*****************************
+//incluir alertas de inputs
 
-console.log(message);
-console.log(key);
-});*/
-
-//1er paso: Crear la funcion Cifrar:
-//Declarar las variables
-//iterar sobre el str(userMessage)
-//convertirlo a ASCII (charCodeAt)
-//delimitar la posicion en ASCII >= 65 - <= 90
-//convertir de ASCII sumandole el offset
-//retornar resultado
-//Función Cifrar
+//*****************EVENTO PARA BOTON BORRAR*****************************
