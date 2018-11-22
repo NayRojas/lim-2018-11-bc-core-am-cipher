@@ -9,10 +9,7 @@
   padding: 5px;
 }
 
-img {
-  width:20px;
-  height:20px;
-}
+
 
 h1{
   font-size: 7rem;
@@ -148,7 +145,19 @@ button {
     color: black;
 }
 
-/*#footer{
+.share-buttons{
+  position: relative  ;
+  right: 20;
+  bottom: 20;
+  left: 20;
+}
+
+img {
+  width:20px;
+  height:20px;
+}
+
+#footer{
   font-size: 12px;
   color: gray;
   text-align: center;
@@ -160,4 +169,4 @@ button {
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
-}*/
+}

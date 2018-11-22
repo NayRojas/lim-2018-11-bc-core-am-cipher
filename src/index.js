@@ -3,6 +3,8 @@ let userKey = document.getElementById('offset');
 let cifrarButton = document.getElementById('cifrar-button');
 let descifrarButton = document.getElementById('descifrar-button');
 let borrarButton = document.getElementById('erase');
+let campoVacio = document.getElementById('error-campo-vacio');
+let numVacio = document.getElementById('error-num-vacio');
 let result = "";
 let numAscii;
 
@@ -10,6 +12,15 @@ let numAscii;
 cifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
+
+	if (userMessage === " "){
+		userMessage.innerHTML = "Ingresa tu mensaje ";
+		numVacio.innerHTML =" ";
+	} else (userKey === ""){
+		userMessage.innerHTML = " ";
+		numVacio.innerHTML ="Ingresa tu número clave";
+	}
+
   cifrar(message, key)
 
 
@@ -48,4 +59,4 @@ const borrar = () => {
 	 document.getElementById("offset").value = "";
 };
 
-//*******************************FUNCION COPIAR TEXTO*******************************
+//*******************************FUNCION CONPARTIR*******************************
