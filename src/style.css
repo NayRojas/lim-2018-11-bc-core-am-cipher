@@ -1,4 +1,4 @@
-
+/*
 .bienvenida{
   padding: 1rem;
   background-color: #efefef;
@@ -66,21 +66,10 @@ section{
   height: 313px;
   padding: 20px;
   float:left;
-
 }
 
-#message, #offset{
+#user-options, #user-key-number{
   margin: 20px;
-  border-radius: 10px;
-}
-
-#user-key-number{
-  display:center;
-  margin: 30px;
-  width: 300px;
-  height: 313px;
-  padding: 20px;
-  float:left;
 }
 
 #user-options{
@@ -157,7 +146,7 @@ img {
   height:20px;
 }
 
-#footer{
+  #footer{
   font-size: 12px;
   color: gray;
   text-align: center;

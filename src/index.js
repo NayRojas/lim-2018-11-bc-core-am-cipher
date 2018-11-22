@@ -5,6 +5,7 @@ let descifrarButton = document.getElementById('descifrar-button');
 let borrarButton = document.getElementById('erase');
 let campoVacio = document.getElementById('error-campo-vacio');
 let numVacio = document.getElementById('error-num-vacio');
+let campoParaMostrarMensaje = document.getElementById("message-cifrado");
 let result = "";
 let numAscii;
 
@@ -12,22 +13,29 @@ let numAscii;
 cifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
+	cifrar(message, key)
+/*
+	if (userMessage.value === " "){
+		alert("Ingresa tu mensaje ");
+		console.log("entro");
+	} else if (userKey.value === " "){
+		alert("Ingresa tu número clave");
+	} else {
 
-	if (userMessage === " "){
-		userMessage.innerHTML = "Ingresa tu mensaje ";
-		numVacio.innerHTML =" ";
-	} else (userKey === ""){
-		userMessage.innerHTML = " ";
-		numVacio.innerHTML ="Ingresa tu número clave";
 	}
 
-  cifrar(message, key)
+/*if (document.getElementById('segundaPantalla').style.visibility === "hidden"){
+		document.getElementById('segundaPantalla').style.visibility = "visible";
+	}else{
+		document.getElementById('segundaPantalla').style.visibility = "hidden";
+	}*/
 
-
-  let userMessageCifrado = document.getElementById('message').value;
-  let replace = userMessageCifrado.replace( userMessageCifrado, result);
-  document.getElementById("message").value = replace;
+//Remplazo del texto en el area de texto
+let userMessageDescifrado = document.getElementById('message').value;
+let replace = userMessageDescifrado.replace( userMessageDescifrado, result);
+document.getElementById("message").value = replace;
 });
+
 
 
 //*****************EVENTO PARA BOTON DESCIFRAR*****************************
@@ -39,12 +47,11 @@ descifrarButton.addEventListener('click', () => {
   descifrar(message, key)
 
   let userMessageDescifrado = document.getElementById('message').value;
-  console.log("entro")
   let replace = userMessageDescifrado.replace( userMessageDescifrado, result);
   document.getElementById("message").value = replace;
 });
 
-//*******************************FUNCION BORRAR*******************************
+//*******************************FUNCION VOLVER*******************************
 
 borrarButton.addEventListener('click', () => {
 	const message = userMessage.value;
@@ -58,5 +65,11 @@ const borrar = () => {
 	 document.getElementById("message").value = "";
 	 document.getElementById("offset").value = "";
 };
+
+/*if (document.getElementById('primerPantalla').style.visibility === "hidden"){
+	document.getElementById('segundaPantalla').style.visibility = "visible";
+}else{
+	document.getElementById('segundaPantalla').style.visibility = "hidden";
+};*/
 
 //*******************************FUNCION CONPARTIR*******************************
