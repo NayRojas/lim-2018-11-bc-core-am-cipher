@@ -13,7 +13,7 @@ let campoParaMostrarMensaje = document.getElementById("message-cifrado");
 cifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
-	cifrar(message, key);
+	//cifrar(message, key);
 	console.log(resultC)
 
 	//Condición si hay espacios vacios y sino ejecutar función
@@ -23,7 +23,7 @@ cifrarButton.addEventListener('click', () => {
 	} else if (userKey.value === "0"){
 		numVacio.innerHTML = "Ingresa tu número clave";
 	} else {
-		cifrar(message, key);
+		cipher.encode(message, key);
 	};
 
 	//Remplazo del texto en el area de texto
@@ -49,12 +49,13 @@ descifrarButton.addEventListener('click', () => {
 		} else if (userKey.value === "0"){
 			numVacio.innerHTML = "Ingresa tu número clave";
 		} else {
-			descifrar(message, key);
+			cipher.decode(message, key);
 		};
 
 //Remplazo del texto en el area de texto
 			let userMessageDescifrado = document.getElementById('message').value;
 			let replace = userMessageDescifrado.replace( userMessageDescifrado, resultD);
+			console.log(resultD);
 			document.getElementById("message").value = replace;
 	});
 
