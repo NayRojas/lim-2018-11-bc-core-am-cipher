@@ -1,10 +1,14 @@
+.error{
+  color: red;
+}
+
 /*
 .bienvenida{
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
 }
-
+/*
 .general-user-options{
   padding: 5px;
 }
@@ -15,7 +19,6 @@ h1{
   font-size: 7rem;
   text-align: center;
   font-family: sans-serif;
-  margin: 15px;
 }
 
 h2{
@@ -56,28 +59,20 @@ section{
   text-align: left;
   font-family: sans-serif;
   color: gray;
-  display: block;
 }
 
 #user-message{
   display: block;
-  margin: 30px;
-  width: 300px;
-  height: 313px;
-  padding: 20px;
   float:left;
 }
 
-#user-options, #user-key-number{
-  margin: 20px;
+#user-key-number{
+
+  float:inherit;
 }
 
 #user-options{
-  margin: 30px;
-  width: 300px;
-  height: 313px;
-  padding: 20px;
-  float:left;
+  float:right;
 }
 
 button {
@@ -85,21 +80,16 @@ button {
     border: none;
     color: white;
     font-weight: bold;
-    padding: 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
-    width: 300px;
-    height: 40px;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
 #cifrar-button {
     background-color: #FF4500;
-    margin: 20px;
     color: white;
     border: 2px solid #FF4500;
 }
@@ -111,7 +101,6 @@ button {
 
 #descifrar-button {
     background-color: #FFD700;
-    margin: 20px;
     color: black;
     border: 2px solid #FFD700;
 }
@@ -123,8 +112,6 @@ button {
 
 #erase {
     background-color: #A9A9A9;
-    margin: 5px;
-    width: 150px;
     color: black;
     border: 2px solid #A9A9A9;
 }
@@ -136,9 +123,6 @@ button {
 
 .share-buttons{
   position: relative  ;
-  right: 20;
-  bottom: 20;
-  left: 20;
 }
 
 img {

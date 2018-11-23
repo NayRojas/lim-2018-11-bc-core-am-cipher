@@ -1,12 +1,15 @@
 // En este objeto declaro los metodos ENCODE y DECODE
 /*window.cipher = {
-  encode: cifrar (userMessage, key) => ,
-	decode: cifrar (userMessage, key) =>
-	numAscii = (26 - (userKey % 26)) % 26;*/
+  encode:(message, key) => cipher.cifrar(message, key) ,
+  decode:(message, key) => cipher.descifrar(message, key)
 
+    return cipher.cifrar(message, key);
+		return cipher.descifrar(message, key);
+};*/
+
+let resultC = "";
 //****************************FUNCION CIFRAR*******************************
 const cifrar = (message, key) => {
-let result = "";
 let numAscii;
 //RECORRIDO EL MENSAJE DEL USUARIO
 	for (let i = 0; i < message.length; i++){
@@ -15,25 +18,26 @@ let numAscii;
 //Asimila mayúsculas
 				if (numAscii >= 65 && numAscii <= 90){
 					numAscii = String.fromCharCode((numAscii - 65 + parseInt(key)) % 26 + 65);
-					result += numAscii;
-					console.log(result);
+					resultC += numAscii;
+					console.log(resultC);
+
 //Asimila minisculas
 				} else if (numAscii >= 97 && numAscii <= 122){
 					numAscii = String.fromCharCode((numAscii - 97 + parseInt(key)) % 26 + 97);
-					result += numAscii;
-					console.log(result);
+					resultC += numAscii;
+					console.log(resultC);
+
 //Asimila el espacio " "
 				} else if (numAscii === 32){
-					result += " ";
+					resultC += " ";
 				}
 		}
 	};
 //};
 
 //**************************FUNCION DESCIFRAR*******************************
-
+let resultD = "";
 const descifrar = (message, key) => {
-let result = "";
 let numAscii;
 
 //**RECORRIDO DEL FOR
@@ -43,17 +47,20 @@ let numAscii;
 //Asimila mayúsculas
 			if (numAscii >= 65 && numAscii <= 90){
 				numAscii = String.fromCharCode ((numAscii + 65 - parseInt(key)) % 26 + 65);
-				result += numAscii;
-				console.log(result);
+				resultD += numAscii;
+				console.log(resultD);
+
+
 //Asimila minisculas
 } else if (numAscii >= 97 && numAscii <= 122){
 				numAscii = String.fromCharCode((numAscii - 97 - parseInt(key)) % 26 + 97);
-				result += numAscii;
-				console.log(result)
+				resultD += numAscii;
+				console.log(resultD)
+
 
 //Asimila el espacio " "
 			} else if (numAscii === 32){
-				result += " ";
+				resultD += " ";
 			}
 		}
-	}
+	};

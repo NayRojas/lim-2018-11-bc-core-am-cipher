@@ -27,27 +27,26 @@
     <h4>SIGUE LOS PASOS</h4>
     <hr/>
 
-<!--Aquí comienza a funcionar el programa - El usuario introduce el mensaje-->
-    <div class="general-user-options">
-      <section id="user-message">
-          <label for="firstStep">1</label>
-          <span>Mensaje</span>
-          <p id= "error-campo-vacio"></p>
-          <div class="">
-            <textarea name="message" id="message" cols="40" rows="5" placeholder="Tu mensaje va aquí..." ></textarea>
-          </div>
-          <button id="erase" type="button" name="borrador-inicio">Borrar</button>
-      </section>
-
 <!--El usuario selecciona su número clave-->
       <section id="user-key-number">
-          <label for="secondtStep">2</label>
-          <span>Tu número clave es</span>
-          <p id= "error-num-vacio"></p>
+          <label for="secondtStep">1</label>
+          <span>Selecciona tu número clave:</span>
+          <p class="error" id= "error-num-vacio"></p>
           <div class="description-for-offset">
-            <input id ="offset" type="number" min="1" name="Tu número clave aquí...">
-
+            <input id ="offset" type="number" min="1" value="0" name="Tu número clave aquí...">
       </section>
+
+<!--Aquí comienza a funcionar el programa - El usuario introduce el mensaje-->
+  <div class="general-user-options">
+    <section id="user-message">
+        <label for="firstStep">2</label>
+        <span>Escribe tu mensaje:</span>
+        <p class="error" id= "error-campo-vacio"></p>
+        <div class="myMessage">
+          <textarea name="message" id="message" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." ></textarea>
+        </div>
+        <button id="erase" type="button" name="borrador-inicio">Borra para escribir un nuevo mensaje</button>
+    </section>
 
 <!--*************El usuario selecciona si desea cifrar o descifrar************-->
       <section id="user-options">

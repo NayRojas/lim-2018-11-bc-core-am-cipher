@@ -6,56 +6,64 @@ let borrarButton = document.getElementById('erase');
 let campoVacio = document.getElementById('error-campo-vacio');
 let numVacio = document.getElementById('error-num-vacio');
 let campoParaMostrarMensaje = document.getElementById("message-cifrado");
-let result = "";
-let numAscii;
+
+
 
 //**********************EVENTO DEL BOTON CIFRAR**************************
 cifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
-	cifrar(message, key)
-/*
-	if (userMessage.value === " "){
-		alert("Ingresa tu mensaje ");
+	cifrar(message, key);
+	console.log(resultC)
+
+	//Condición si hay espacios vacios y sino ejecutar función
+	if (userMessage.value === ""){
+		campoVacio.innerHTML = "Ingresa tu mensaje";
 		console.log("entro");
-	} else if (userKey.value === " "){
-		alert("Ingresa tu número clave");
+	} else if (userKey.value === "0"){
+		numVacio.innerHTML = "Ingresa tu número clave";
 	} else {
+		cifrar(message, key);
+	};
 
-	}
+	//Remplazo del texto en el area de texto
+	let userMessageDescifrado = document.getElementById('message').value;
+	let replace = userMessageDescifrado.replace( userMessageDescifrado, resultC);
+	document.getElementById("message").value = replace;
 
-/*if (document.getElementById('segundaPantalla').style.visibility === "hidden"){
-		document.getElementById('segundaPantalla').style.visibility = "visible";
-	}else{
-		document.getElementById('segundaPantalla').style.visibility = "hidden";
-	}*/
+	});
 
-//Remplazo del texto en el area de texto
-let userMessageDescifrado = document.getElementById('message').value;
-let replace = userMessageDescifrado.replace( userMessageDescifrado, result);
-document.getElementById("message").value = replace;
-});
 
 
 
 //*****************EVENTO PARA BOTON DESCIFRAR*****************************
-//incluir alertas de inputs
 
 descifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
-  descifrar(message, key)
 
-  let userMessageDescifrado = document.getElementById('message').value;
-  let replace = userMessageDescifrado.replace( userMessageDescifrado, result);
-  document.getElementById("message").value = replace;
-});
+	//Condición si hay espacios vacios y sino ejecutar función
+		if (userMessage.value === ""){
+			campoVacio.innerHTML = "Ingresa tu mensaje";
+			console.log("entro");
+		} else if (userKey.value === "0"){
+			numVacio.innerHTML = "Ingresa tu número clave";
+		} else {
+			descifrar(message, key);
+		};
 
-//*******************************FUNCION VOLVER*******************************
+//Remplazo del texto en el area de texto
+			let userMessageDescifrado = document.getElementById('message').value;
+			let replace = userMessageDescifrado.replace( userMessageDescifrado, resultD);
+			document.getElementById("message").value = replace;
+	});
+
+
+//*******************************EVENTO BORRAR*******************************
 
 borrarButton.addEventListener('click', () => {
-	const message = userMessage.value;
-	const key = userKey.value;
+	let message = userMessage.value;
+	let key = userKey.value;
 
 	borrar()
 	console.log("entro");
@@ -63,13 +71,12 @@ borrarButton.addEventListener('click', () => {
 
 const borrar = () => {
 	 document.getElementById("message").value = "";
-	 document.getElementById("offset").value = "";
+	 document.getElementById("offset").value = "0";
+	 numVacio.innerHTML = "";
+	 campoVacio.innerHTML = "";
+	 resultC = "";
+	 resultD = "";
 };
 
-/*if (document.getElementById('primerPantalla').style.visibility === "hidden"){
-	document.getElementById('segundaPantalla').style.visibility = "visible";
-}else{
-	document.getElementById('segundaPantalla').style.visibility = "hidden";
-};*/
 
-//*******************************FUNCION CONPARTIR*******************************
+//*****************************FUNCION CONPARTIR*******************************
