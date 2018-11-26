@@ -16,6 +16,25 @@ cifrarButton.addEventListener('click', () => {
 	//cifrar(message, key);
 	console.log(resultC)
 
+
+	const estiloMensajeCifrado = () =>{
+		//Mostrar botón de volver
+		document.getElementById('user-options').style.visibility ="hidden";
+		document.getElementById('erase').style.visibility ="visible";
+	//Mostrar estilos al cifrar mensaje
+		document.getElementById('message').style.borderColor = "lightgray";
+		document.getElementById('message').style.borderWidth = "thick";
+		document.getElementById('message').style.textAlign = "center";
+		document.getElementById('message').style.fontWeight = "bolder";
+		document.getElementById('steps2').style.color = "red";
+		document.getElementById('steps2').style.fontWeight = "bolder";
+		campoVacio.innerHTML = "CIFRADO";
+		campoVacio.style.letterSpacing = "1rem";
+		campoVacio.style.fontWeight = "bolder";
+		campoVacio.style.borderWeight = "900";
+	};
+
+
 	//Condición si hay espacios vacios y sino ejecutar función
 	if (userMessage.value === ""){
 		campoVacio.innerHTML = "Ingresa tu mensaje";
@@ -28,9 +47,8 @@ cifrarButton.addEventListener('click', () => {
 		cipher.encode(message, key);
 //Bloqueo de edición del area de texto
 		document.getElementById('message').readOnly = true;
+		estiloMensajeCifrado ();
 //limpiando mensajes de error
-		campoVacio.innerHTML = "";
-		numVacio.innerHTML = "";
 
 	};
 
@@ -39,10 +57,9 @@ cifrarButton.addEventListener('click', () => {
 	let replace = userMessageDescifrado.replace( userMessageDescifrado, resultC);
 	document.getElementById("message").value = replace;
 
-	});
 
-//Mostrar botón de volver
-document.querySelector('main-buttons').style.visibility="hidden";
+});
+
 
 
 //*****************EVENTO PARA BOTON DESCIFRAR*****************************
@@ -50,6 +67,24 @@ document.querySelector('main-buttons').style.visibility="hidden";
 descifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
+
+	const estiloMensajeCifrado = () =>{
+		//Mostrar botón de volver
+		document.getElementById('user-options').style.visibility ="hidden";
+		document.getElementById('erase').style.visibility ="visible";
+		//Mostrar estilos al decifrar
+		document.getElementById('message').style.borderColor = "red";
+		document.getElementById('message').style.borderWidth = "thick";
+		document.getElementById('message').style.textAlign = "center";
+		document.getElementById('message').style.fontWeight = "bolder";
+		document.getElementById('steps2').style.color = "red";
+		document.getElementById('steps2').style.fontWeight = "bolder";
+		document.getElementById('steps2').style.borderWeight = "900";
+		campoVacio.innerHTML = "DESCIFRADO";
+		campoVacio.style.letterSpacing = "1rem";
+		campoVacio.style.fontSize = "0.9	rem";
+		campoVacio.style.fontWeight = "bolder";
+	};
 
 	//Condición si hay espacios vacios y sino ejecutar función
 		if (userMessage.value === ""){
@@ -65,9 +100,7 @@ descifrarButton.addEventListener('click', () => {
 			cipher.decode(message, key);
 //Bloqueo de edición del area de texto
 document.getElementById('message').readOnly = true;
-//limpiando mensajes de error
-			campoVacio.innerHTML = "";
-			numVacio.innerHTML = "";
+estiloMensajeCifrado ();
 		};
 
 //Remplazo del area de texto
@@ -75,10 +108,7 @@ document.getElementById('message').readOnly = true;
 			let replace = userMessageDescifrado.replace( userMessageDescifrado, resultD);
 			console.log(resultD);
 			document.getElementById("message").value = replace;
-
-//Mostrar botón de volver
-
-
+S
 
 	});
 
@@ -90,6 +120,7 @@ borrarButton.addEventListener('click', () => {
 	let key = userKey.value;
 
 	borrar()
+	volver()
 	console.log("entro");
 });
 
@@ -100,6 +131,20 @@ const borrar = () => {
 	 campoVacio.innerHTML = "";
 	 resultC = "";
 	 resultD = "";
+};
+
+const volver = () => {
+	 document.getElementById('user-options').style.visibility ="visible";
+	 document.getElementById('steps2').style.color = "gray";
+	 document.getElementById('steps1').style.color = "gray";
+	 document.getElementById('message').style.borderColor = "#d9d9d9";
+	 document.getElementById('message').style.textAlign = "left";
+	 document.getElementById('steps2').style.fontWeight = "lighter";
+	 document.getElementById('erase').style.visibility ="hidden";
+	 document.getElementById('message').readOnly = false;
+
+
+
 };
 
 
