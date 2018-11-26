@@ -2,45 +2,56 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="style.css">
     <title>Enigma 2.0</title>
   </head>
   <body>
 
 <!--Bienvenida del programa-->
-<header>
+<header class= "contenedor">
   <div class="bienvenida">
-    <h1>Enigma 2.0</h1>
-    <h2>¿Por que te vigilan las redes sociales, sino eres nadie?</h2>
+    <img id="logo" src="chip.png">
+    <h1 class="icon-lock">ENIGMA 2.0</h1>
   </div>
 </header>
 
-<!--PRIMERA PANTALLA-->
-<section class= "primerPantalla">
-  <div class="reason-Why">
-    <p class = "intro"> No te ha pasado que <strong>dudas</strong> antes de meter tu clave en un nuevo computador, o que prefieres hablar de tus numeros de tarjeta de crédito o sumas de dinero en persona que por telefono. </p>
-    <p class = "intro"> Bueno, este es solo el inicio para que entiendas cuanto vale cada mensaje y oración que compartes en internet </p>
-  </div>
 
-    <hr/>
-    <h4>SIGUE LOS PASOS</h4>
-    <hr/>
+<!--PRIMERA PANTALLA-->
+<main>
+  <section id="banner">
+    <img src="banner.png" alt="laptop">
+    <div class="contenedor">
+      <h2>Tu privacidad es un derecho que no tiene precio </h2>
+      <p class = "intro"> Somos una empresa sin fines de lucro, nuestra principal motivación es proteger tu información </p>
+    </div>
+  </section>
+
+  <section id="bienvenida">
+    <h2> Bienvenido al Encriptador de Mensajes Gratuito</h2>
+    <p>Basado en el metodo del Emperador Cesar, ahora puedes cifrar tus mensajes y luego compartirlos con la confianza de que tu información esta protegida. </p>
+    <p>Si deseas cifrar o descifrar un mensaje, solo <strong>elige un número clave, escribe tu mensaje y selecciona tu opción. </strong> </p>
+  </section>
+</main>
+<section class= "form">
 
 <!--El usuario selecciona su número clave-->
-      <section id="user-key-number">
-          <label for="secondtStep">1</label>
-          <span>Selecciona tu número clave:</span>
+    <section class= "contenedor">
+      <div id="user-key-number">
+          <label for="secondtStep"></label>
+          <span>CLAVE</span>
           <p class="error" id= "error-num-vacio"></p>
           <div class="description-for-offset">
-            <input id ="offset" type="number" min="1" value="0" name="Tu número clave aquí...">
-      </section>
+            <input id ="offset" type="number" min="1" value="1" placeholder="Tu número clave aquí...">
+      </div>
+    </section>
 
 <!--Aquí comienza a funcionar el programa - El usuario introduce el mensaje-->
-  <div class="general-user-options">
+  <div "class= "contenedor"">
     <section id="user-message">
-        <label for="firstStep">2</label>
-        <span>Escribe tu mensaje:</span>
+        <label for="firstStep"></label>
+        <span>MENSAJE</span>
         <p class="error" id= "error-campo-vacio"></p>
         <div class="myMessage">
           <textarea name="message" id="message" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." ></textarea>
@@ -50,10 +61,7 @@
 
 <!--*************El usuario selecciona si desea cifrar o descifrar************-->
       <section id="user-options">
-          <label for="secondtStep">3</label>
-          <span>¿Que deseas hacer?</span>
-          <br>
-          <br>
+          <label for="secondtStep"></label>
           <div class="main-buttons">
 <!--Aqui el usuario CIFRAR -->
             <div id="first-button">
@@ -66,6 +74,7 @@
           </div>
       </section>
     </div>
+  </section>
 
 <!--*************El usuario comparte vía Whatsapp************
     <div class="share-buttons">
