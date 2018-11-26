@@ -19,11 +19,19 @@ cifrarButton.addEventListener('click', () => {
 	//Condición si hay espacios vacios y sino ejecutar función
 	if (userMessage.value === ""){
 		campoVacio.innerHTML = "Ingresa tu mensaje";
+		userMessage.readOnly = false;
 		console.log("entro");
-	} else if (userKey.value === "0"){
+	} else if (userKey.value === ""){
 		numVacio.innerHTML = "Ingresa tu número clave";
+		userKey.readOnly = false;
 	} else {
 		cipher.encode(message, key);
+//Bloqueo de edición del area de texto
+		document.getElementById('message').readOnly = true;
+//limpiando mensajes de error
+		campoVacio.innerHTML = "";
+		numVacio.innerHTML = "";
+
 	};
 
 	//Remplazo del texto en el area de texto
@@ -33,7 +41,8 @@ cifrarButton.addEventListener('click', () => {
 
 	});
 
-
+//Mostrar botón de volver
+document.querySelector('main-buttons').style.visibility="hidden";
 
 
 //*****************EVENTO PARA BOTON DESCIFRAR*****************************
@@ -45,18 +54,32 @@ descifrarButton.addEventListener('click', () => {
 	//Condición si hay espacios vacios y sino ejecutar función
 		if (userMessage.value === ""){
 			campoVacio.innerHTML = "Ingresa tu mensaje";
+			numVacio.innerHTML = "";
+			userMessage.readOnly = false;
 			console.log("entro");
 		} else if (userKey.value === "0"){
+			campoVacio.innerHTML = "";
 			numVacio.innerHTML = "Ingresa tu número clave";
+			userKey.readOnly = false;
 		} else {
 			cipher.decode(message, key);
+//Bloqueo de edición del area de texto
+document.getElementById('message').readOnly = true;
+//limpiando mensajes de error
+			campoVacio.innerHTML = "";
+			numVacio.innerHTML = "";
 		};
 
-//Remplazo del texto en el area de texto
+//Remplazo del area de texto
 			let userMessageDescifrado = document.getElementById('message').value;
 			let replace = userMessageDescifrado.replace( userMessageDescifrado, resultD);
 			console.log(resultD);
 			document.getElementById("message").value = replace;
+
+//Mostrar botón de volver
+
+
+
 	});
 
 
@@ -72,7 +95,7 @@ borrarButton.addEventListener('click', () => {
 
 const borrar = () => {
 	 document.getElementById("message").value = "";
-	 document.getElementById("offset").value = "0";
+	 document.getElementById("offset").value = "";
 	 numVacio.innerHTML = "";
 	 campoVacio.innerHTML = "";
 	 resultC = "";

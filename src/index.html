@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width= device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="style.css">
     <title>Enigma 2.0</title>
   </head>
@@ -35,46 +34,46 @@
   </section>
 </main>
 <section class= "form">
+  <div class="inputs">
+    <!--El usuario selecciona su número clave-->
+        <section class= "contenedor">
+          <div id="user-key-number">
+              <label for="secondtStep"></label>
+              <span class="steps">CLAVE</span>
+              <p class="error" id= "error-num-vacio"></p>
+              <div class="description-for-offset">
+                <input id ="offset" type="number" min="1"  value="" placeholder="Tu número clave aquí...">
+          </div>
+        </section>
 
-<!--El usuario selecciona su número clave-->
-    <section class= "contenedor">
-      <div id="user-key-number">
-          <label for="secondtStep"></label>
-          <span>CLAVE</span>
-          <p class="error" id= "error-num-vacio"></p>
-          <div class="description-for-offset">
-            <input id ="offset" type="number" min="1" value="1" placeholder="Tu número clave aquí...">
+    <!--Aquí comienza a funcionar el programa - El usuario introduce el mensaje-->
+      <div "class= "contenedor"">
+        <section id="user-message">
+            <span class="steps">MENSAJE</span>
+            <p class="error" id= "error-campo-vacio"></p>
+            <div class="myMessage">
+              <textarea name="message" id="message" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." ></textarea>
+            </div>
+        </section>
       </div>
-    </section>
-
-<!--Aquí comienza a funcionar el programa - El usuario introduce el mensaje-->
-  <div "class= "contenedor"">
-    <section id="user-message">
-        <label for="firstStep"></label>
-        <span>MENSAJE</span>
-        <p class="error" id= "error-campo-vacio"></p>
-        <div class="myMessage">
-          <textarea name="message" id="message" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." ></textarea>
-        </div>
-        <button id="erase" type="button" name="borrador-inicio">Borra para escribir un nuevo mensaje</button>
-    </section>
 
 <!--*************El usuario selecciona si desea cifrar o descifrar************-->
       <section id="user-options">
-          <label for="secondtStep"></label>
-          <div class="main-buttons">
+          <div class="main-buttons" style= "visibility:visible">
 <!--Aqui el usuario CIFRAR -->
             <div id="first-button">
-              <button id="cifrar-button" type="button" name="Cifrar" class="w3-button w3-deep-orange">Cifrar tu mensaje</button>
+              <button id="cifrar-button" type="button" name="Cifrar" class="w3-button w3-deep-orange">CIFRAR</button>
             </div>
 <!--Aqui el usuario DESCIFRAR-->
             <div id="second-button">
-              <button id="descifrar-button"  type="button" name="descifrar" class="w3-button w3-orange">Descifrar tu mensaje</button>
+              <button id="descifrar-button"  type="button" name="descifrar" class="w3-button w3-orange">DESCIFRAR</button>
             </div>
           </div>
       </section>
     </div>
-  </section>
+    <button id="erase" type="button" name="borrador-inicio" style= "visibility:hidden">Borrar para escribir Nuevo Mensaje</button>
+
+</section>
 
 <!--*************El usuario comparte vía Whatsapp************
     <div class="share-buttons">
@@ -97,9 +96,9 @@
     </section>
 </section>-->
 
-    <section id="footer">
+    <div id="footer">
       <footer>Programa de concientización sobre privacidad de la  informacion</footer>
-    </section>
+    </div>
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>

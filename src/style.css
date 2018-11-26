@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Niramit');
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 *{
     margin: 0;
@@ -7,7 +7,8 @@
 }
 
 body{
-  font-family: 'Niramit', sans-serif;
+  font-family: 'Muli', sans-serif;
+  text-align: center;
   /*background-image: url("tiny-squares.png");*/
 }
 
@@ -27,12 +28,15 @@ header{
   float: left;
 	padding: 15px 0 0 20px;
 	text-decoration: none;
-  width: 3%;
-  height: 3%;
+  width: 3.5%;
+  height: 3.5%;
 }
 
 .error{
   color: red;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 1em;
 }
 
 .contenedor{
@@ -76,10 +80,12 @@ section{
 
 #banner h2{
   font-size: 35px;
+  text-align: left;
 }
 
 #banner p{
   color:rgba(192,192,192,0.80);
+  text-align: left;
 }
 
 #bienvenida {
@@ -93,168 +99,129 @@ section{
 }
 
 .form{
-  padding: 0.5em;
-  background: rgba(192,192,192,0.3);
-  border: 1px solid #c1c1c1;
+  padding: 1em;
+  background:rgba(0, 0, 0,0.10);
+  border: 1px solid #d9d9d9;
   margin-top: 1.5rem;
-  max-width: 500px;
+  max-width: 30em;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
+  border-radius: 8px;
   -webkit-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
   -moz-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
   box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
+}
+
+.steps{
+  text-align: center;
+  letter-spacing: 1rem;
+  font-weight: lighter;
+  color: gray;
+  padding: 1rem;
+}
+
+#user-message{
+  margin: auto;
 }
 
 textarea{
   text-align: left;
   border-radius: 5px;
   margin-bottom: 10px;
-  width: 50%;
+  width: 60%;
   resize: none;
   padding: 5px;
+  margin: 3%;
 }
 
 #offset{
   text-align: left;
   border-radius: 5px;
   margin-bottom: 10px;
-  width: 50%;
+  width: 60%;
   resize: none;
   padding: 5px;
+  margin: 3%;
 }
 
-/*
-.bienvenida{
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
-}
-/*
-.general-user-options{
-  padding: 5px;
-}
-
-
-
-h1{
-  font-size: 7rem;
-  text-align: center;
-  font-family: sans-serif;
-}
-
-h2{
-  font-size: 2rem;
-  text-align: center;
-  font-family: sans-serif;
-}
-
-h4{
-  font-size: 1rem;
-  text-align: center;
-  font-family: sans-serif;
-  color: gray;
-  letter-spacing: 2px;
-  font-weight: lighter;
-}
-
-.intro{
-  font-size: 1rem;
-  font-weight: lighter;
-  color: black;
-  text-align: center;
-  font-family: sans-serif;
-}
-
-span{
-  font-size:  1.5rem;
-
-}
-
-#error-campo-vacio{
-    color: #A52A2A;
-    font-size: 1rem;
-}
-
-section{
-  font-size: 2rem;
-  text-align: left;
-  font-family: sans-serif;
-  color: gray;
-}
-
-#user-message{
+.main-buttons{
   display: block;
-  float:left;
+  margin-left: 5rem;
+ margin-right: 5rem;
+  height: 1%;
 }
 
-#user-key-number{
-
-  float:inherit;
-}
-
-#user-options{
-  float:right;
-}
-
-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-#cifrar-button {
-    background-color: #FF4500;
-    color: white;
-    border: 2px solid #FF4500;
+#cifrar-button{
+  background: #800808;
+  background-image: -webkit-linear-gradient(top, #800808, #db2525);
+  background-image: -moz-linear-gradient(top, #800808, #db2525);
+  background-image: -ms-linear-gradient(top, #800808, #db2525);
+  background-image: -o-linear-gradient(top, #800808, #db2525);
+  background-image: linear-gradient(to bottom, #800808, #db2525);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: 'Muli', sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 0.4em;
+  font-weight: bold;
+  padding: 9px 20px 10px 20px;
+  text-decoration: none;
+  float: left;
 }
 
 #cifrar-button:hover {
-    background-color: white;
-    color: black;
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #0f0f0f);
+  background-image: -moz-linear-gradient(top, #000000, #0f0f0f);
+  background-image: -ms-linear-gradient(top, #000000, #0f0f0f);
+  background-image: -o-linear-gradient(top, #000000, #0f0f0f);
+  background-image: linear-gradient(to bottom, #000000, #0f0f0f);
+  text-decoration: none;
 }
 
-#descifrar-button {
-    background-color: #FFD700;
-    color: black;
-    border: 2px solid #FFD700;
+#descifrar-button{
+  background: #00135e;
+  background-image: -webkit-linear-gradient(top, #00135e, #0c3294);
+  background-image: -moz-linear-gradient(top, #00135e, #0c3294);
+  background-image: -ms-linear-gradient(top, #00135e, #0c3294);
+  background-image: -o-linear-gradient(top, #00135e, #0c3294);
+  background-image: linear-gradient(to bottom, #00135e, #0c3294);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 5px;
+  font-family: 'Muli', sans-serif;
+  color: #ffffff;
+  font-size: 0.8em;
+  letter-spacing: 0.4em;
+  font-weight: bold;
+  padding: 9px 20px 10px 20px;
+  text-decoration: none;
+  float: left;
 }
 
 #descifrar-button:hover {
-    background-color: white;
-    color: black;
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #0f0f0f);
+  background-image: -moz-linear-gradient(top, #000000, #0f0f0f);
+  background-image: -ms-linear-gradient(top, #000000, #0f0f0f);
+  background-image: -o-linear-gradient(top, #000000, #0f0f0f);
+  background-image: linear-gradient(to bottom, #000000, #0f0f0f);
+  text-decoration: none;
+}}
+
+#erase{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#erase {
-    background-color: #A9A9A9;
-    color: black;
-    border: 2px solid #A9A9A9;
+#erase:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#erase:hover {
-    background-color: white;
-    color: black;
-}
 
-.share-buttons{
-  position: relative  ;
-}
+  /*#footer{
 
-img {
-  width:20px;
-  height:20px;
-}
-
-  #footer{
-  font-size: 12px;
-  color: gray;
   text-align: center;
   font-family: sans-serif;
   position: absolute;
@@ -262,6 +229,17 @@ img {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #efefef;
+
   text-align: center;
+}*/
+
+footer{
+ font-size: 12px;
+ color: gray;
+ margin-top:1em;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ padding: 0.5rem;
+ background-color: #000000;;
 }
