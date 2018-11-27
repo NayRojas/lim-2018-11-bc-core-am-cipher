@@ -5,8 +5,6 @@ let descifrarButton = document.getElementById('descifrar-button');
 let borrarButton = document.getElementById('erase');
 let campoVacio = document.getElementById('error-campo-vacio');
 let numVacio = document.getElementById('error-num-vacio');
-let campoParaMostrarMensaje = document.getElementById("message-cifrado");
-
 
 
 //**********************EVENTO DEL BOTON CIFRAR**************************
@@ -14,7 +12,6 @@ cifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
 	//cifrar(message, key);
-	console.log(resultC)
 
 
 	const estiloMensajeCifrado = () =>{
@@ -39,7 +36,6 @@ cifrarButton.addEventListener('click', () => {
 	if (userMessage.value === ""){
 		campoVacio.innerHTML = "Ingresa tu mensaje";
 		userMessage.readOnly = false;
-		console.log("entro");
 	} else if (userKey.value === ""){
 		numVacio.innerHTML = "Ingresa tu número clave";
 		userKey.readOnly = false;
@@ -50,11 +46,11 @@ cifrarButton.addEventListener('click', () => {
 		estiloMensajeCifrado ();
 //limpiando mensajes de error
 
-	};
+	}
 
 	//Remplazo del texto en el area de texto
 	let userMessageDescifrado = document.getElementById('message').value;
-	let replace = userMessageDescifrado.replace( userMessageDescifrado, resultC);
+	let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.encode('ABC',3));
 	document.getElementById("message").value = replace;
 
 
@@ -91,7 +87,6 @@ descifrarButton.addEventListener('click', () => {
 			campoVacio.innerHTML = "Ingresa tu mensaje";
 			numVacio.innerHTML = "";
 			userMessage.readOnly = false;
-			console.log("entro");
 		} else if (userKey.value === "0"){
 			campoVacio.innerHTML = "";
 			numVacio.innerHTML = "Ingresa tu número clave";
@@ -101,51 +96,42 @@ descifrarButton.addEventListener('click', () => {
 //Bloqueo de edición del area de texto
 document.getElementById('message').readOnly = true;
 estiloMensajeCifrado ();
-		};
+		}
 
 //Remplazo del area de texto
 			let userMessageDescifrado = document.getElementById('message').value;
 			let replace = userMessageDescifrado.replace( userMessageDescifrado, resultD);
-			console.log(resultD);
 			document.getElementById("message").value = replace;
-S
+
 
 	});
 
 
 //*******************************EVENTO BORRAR*******************************
-
 borrarButton.addEventListener('click', () => {
-	let message = userMessage.value;
-	let key = userKey.value;
-
+	//let message = userMessage.value;
+	//let key = userKey.value;
 	borrar()
 	volver()
-	console.log("entro");
 });
 
 const borrar = () => {
-	 document.getElementById("message").value = "";
-	 document.getElementById("offset").value = "";
-	 numVacio.innerHTML = "";
-	 campoVacio.innerHTML = "";
-	 resultC = "";
-	 resultD = "";
+	document.getElementById("message").value = "";
+	document.getElementById("offset").value = "";
+	numVacio.innerHTML = "";
+	campoVacio.innerHTML = "";
+	resultC = "";
+	resultD = "";
 };
 
 const volver = () => {
-	 document.getElementById('user-options').style.visibility ="visible";
-	 document.getElementById('steps2').style.color = "gray";
-	 document.getElementById('steps1').style.color = "gray";
-	 document.getElementById('message').style.borderColor = "#d9d9d9";
-	 document.getElementById('message').style.textAlign = "left";
-	 document.getElementById('steps2').style.fontWeight = "lighter";
-	 document.getElementById('erase').style.visibility ="hidden";
-	 document.getElementById('message').readOnly = false;
-
-
-
+	document.getElementById('user-options').style.visibility ="visible";
+	document.getElementById('steps2').style.color = "gray";
+	document.getElementById('steps1').style.color = "gray";
+	document.getElementById('message').style.borderColor = "#d9d9d9";
+	document.getElementById('message').style.textAlign = "left";
+	document.getElementById('steps2').style.fontWeight = "lighter";
+	document.getElementById('erase').style.visibility ="hidden";
+	document.getElementById('message').readOnly = false;
 };
-
-
 //*****************************FUNCION CONPARTIR*******************************
