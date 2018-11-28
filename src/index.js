@@ -11,14 +11,12 @@ let numVacio = document.getElementById('error-num-vacio');
 cifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
-	//cifrar(message, key);
-
 
 	const estiloMensajeCifrado = () =>{
 		//Mostrar botón de volver
 		document.getElementById('user-options').style.visibility ="hidden";
 		document.getElementById('erase').style.visibility ="visible";
-	//Mostrar estilos al cifrar mensaje
+	//Mostrar estilos al cifrar
 		document.getElementById('message').style.borderColor = "lightgray";
 		document.getElementById('message').style.borderWidth = "thick";
 		document.getElementById('message').style.textAlign = "center";
@@ -27,10 +25,9 @@ cifrarButton.addEventListener('click', () => {
 		document.getElementById('steps2').style.fontWeight = "bolder";
 		campoVacio.innerHTML = "CIFRADO";
 		campoVacio.style.letterSpacing = "1rem";
+		campoVacio.style.fontSize = "0.9	rem";
 		campoVacio.style.fontWeight = "bolder";
-		campoVacio.style.borderWeight = "900";
 	};
-
 
 	//Condición si hay espacios vacios y sino ejecutar función
 	if (userMessage.value === ""){
@@ -44,13 +41,11 @@ cifrarButton.addEventListener('click', () => {
 //Bloqueo de edición del area de texto
 		document.getElementById('message').readOnly = true;
 		estiloMensajeCifrado ();
-//limpiando mensajes de error
-
 	}
 
 	//Remplazo del texto en el area de texto
 	let userMessageDescifrado = document.getElementById('message').value;
-	let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.encode('ABC',3));
+	let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.encode(message, key));
 	document.getElementById("message").value = replace;
 
 
@@ -59,7 +54,6 @@ cifrarButton.addEventListener('click', () => {
 
 
 //*****************EVENTO PARA BOTON DESCIFRAR*****************************
-
 descifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
@@ -69,14 +63,14 @@ descifrarButton.addEventListener('click', () => {
 		document.getElementById('user-options').style.visibility ="hidden";
 		document.getElementById('erase').style.visibility ="visible";
 		//Mostrar estilos al decifrar
-		document.getElementById('message').style.borderColor = "red";
+		document.getElementById('message').style.borderColor = "lightgray";
 		document.getElementById('message').style.borderWidth = "thick";
 		document.getElementById('message').style.textAlign = "center";
 		document.getElementById('message').style.fontWeight = "bolder";
-		document.getElementById('steps2').style.color = "red";
+		document.getElementById('steps2').style.color = "blue";
 		document.getElementById('steps2').style.fontWeight = "bolder";
-		document.getElementById('steps2').style.borderWeight = "900";
 		campoVacio.innerHTML = "DESCIFRADO";
+		campoVacio.style.color = "blue";
 		campoVacio.style.letterSpacing = "1rem";
 		campoVacio.style.fontSize = "0.9	rem";
 		campoVacio.style.fontWeight = "bolder";
@@ -100,7 +94,7 @@ estiloMensajeCifrado ();
 
 //Remplazo del area de texto
 			let userMessageDescifrado = document.getElementById('message').value;
-			let replace = userMessageDescifrado.replace( userMessageDescifrado, resultD);
+			let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.decwode(message, key));
 			document.getElementById("message").value = replace;
 
 
@@ -120,8 +114,8 @@ const borrar = () => {
 	document.getElementById("offset").value = "";
 	numVacio.innerHTML = "";
 	campoVacio.innerHTML = "";
-	resultC = "";
-	resultD = "";
+	//window.cipher.encode(message, key) = "";
+	//window.cipher.decode(message, key) = "";
 };
 
 const volver = () => {
@@ -132,6 +126,7 @@ const volver = () => {
 	document.getElementById('message').style.textAlign = "left";
 	document.getElementById('steps2').style.fontWeight = "lighter";
 	document.getElementById('erase').style.visibility ="hidden";
+	campoVacio.style.color = "red";
 	document.getElementById('message').readOnly = false;
 };
 //*****************************FUNCION CONPARTIR*******************************
