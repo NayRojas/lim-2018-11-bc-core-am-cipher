@@ -94,7 +94,7 @@ estiloMensajeCifrado ();
 
 //Remplazo del area de texto
 			let userMessageDescifrado = document.getElementById('message').value;
-			let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.decwode(message, key));
+			let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.decode(message, key));
 			document.getElementById("message").value = replace;
 
 
