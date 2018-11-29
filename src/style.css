@@ -282,10 +282,10 @@ footer #footer{
   }
 }
 
-@media (min-width:768px){
+/*@media (min-width:768px){
   #banner h2{
     font-size: 1.5em;
-  }
+  }*/
 
   .intro{
     font-size: 0.8em;
@@ -295,10 +295,10 @@ footer #footer{
     font-size: 2em;
   }
 
-  #bienvenida p{
+  /*#bienvenida p{
     font-size: 0.9em;
     padding: 2%;
-  }
+  }*/
 
   #logo{
     max-width: 6em;
