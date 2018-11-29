@@ -2,31 +2,37 @@
 
 El gran avance tecnológico nos ha hecho consciente de que estamos vigilados, a través de nuestros móviles, ordenadores y cámaras. Pero como no hacemos nada malo, nos sentimos a salvo. Sin embargo como sociedad cometenemos 3 errores:
 
-1. Infravalorar la cantidad de información que producimos cada día.
+**1. Infravalorar la cantidad de información que producimos cada día.
 2. Despreciar el valor de esa información.
-3. Es pensar que nuestro principal problema puede ser una agencia super distante y poderosa.
+3. Es pensar que nuestro principal problema puede ser una agencia super distante y poderosa.**
 
 Estas entidades encargadas de recolectar nuestros datos, no requieren de grandes recursos y permisos, nosotros ofrecemos esta información voluntariamente, un ejemplo claro de esto es la data que pidió Malte Spitz a su empresa de telefonía en el 2009, que luego de una demanda logro obtener:
 
 [![Tracking Malte Spitz](https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F303878909_1280x864.jpg&src1=https%3A%2F%2Ff.vimeocdn.com%2Fimages_v6%2Fshare%2Fplay_icon_overlay.png)](https://www.youtube.com/watch?v=J1EKvWot-3c)
+
 Esta imagen es casi un diario de Malte en el que se muestra los detalles de su vida diaria, a donde va, a quien llama, cuanto tiempo llama, escribe, que descarga, entre muchos otros (Fuente: (https://www.youtube.com/watch?v=NPE7i8wuupk)).
 
-##Iniciativa
+## Iniciativa
 
-Creemos que esta realidad merece nuestra atención, a traves de espacios y material educativo de alto impacto que ademas de generar engagement, resulte en un despertar del valor que realmente tiene la información que compartimos, inocentemente, por cualquier medio digital.
+Creemos que esta realidad merece nuestra atención, a traves de espacios y material educativo de alto impacto que ademas de generar engagement sobre la protección de datos, resulte en un despertar del valor que realmente tiene la información,  _como data real_, que compartimos inocentemente, por cualquier medio digital.
 
-Esta app web pretende ser un recurso que acompañado por una taller introductorio, ofrezca insights de utlidad para cualquier persona que tenga acceso a un dispositivo móvil. Teniendo como **público de prueba** las estudiantes de Laboratoria.
+Esta app web pretende ser el primer recurso que acompañado por una taller introductorio, ofrezca insights de utlidad para cualquier persona que tenga acceso a un dispositivo móvil. Teniendo como **público de prueba** las estudiantes de Laboratoria.
 
-##Lean Canvas
+## Lean Canvas
 
 Con el fin de mantener una **metodología agíl** en cada una de las herramientas de planificación y organización de este proyecto, se emplea el **Lean Canvas**, ofreciendo en un formato sencillo los aspectos criticos que definen las directrices del proyecto, ademas de permitir su fácil visualización y optimización en el tiempo.
 
 
 
-###Objetivo general
+### Objetivo general  
+
 Concientizar sobre la privacidad de la información a traves de un metodo de cifrado sencillo para se emplea para compartir información sensible.
-###Objetivo especifico			
+
+### Objetivo especifico			
+
 Servirá para que el usuario pueda cifrar y descifrar un texto indicando un desplazamiento específico de caracteres (offset).
+
+### Alcance
 
 - ¿Qué beneficios, cual es el valor que aportará a la organización? (tanto a tu organización como al cliente)										
 Debido a su diseño sencillo y amigable, permite el acercamiento de los complejos sistemas de cifrado y encriptado a las personas, en su entorno cotidiano. Brinda la oportunidad de comprender los motivos por los cuales "proteger nuestros datos" debe ser una tarea del día a día y una desición personal.										
@@ -41,40 +47,63 @@ Que el sistema de cifrado sea usado para un proposito distinto al original, part
 - ¿Existe algún supuesto, premisa, restricción o exclusión que tengas que tener en cuenta?										
 Toda la sección de Requirements establecidas en el repositorio del proyecto ( Requirements).										
 
-##Diseño de la Experiencia del Usuario
+## Diseño de la Experiencia del Usuario
 
-El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es un tipo de cifrado por sustitución, es decir que cada letra del texto original es reemplazada por otra que se encuentra un número fijo de posiciones (desplazamiento) más adelante en el mismo alfabeto.
+### Ideación
 
-Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
+A traves de una breve encuesta con amigos y personas cercanas. Nos percatamos que los metodos de encriptacion de datos no son muy conocidos y **el tema de defender la privacidad de nuestra información digital se ignora con mucha facilidad y ligereza**. Por este motivo y tomando en cuenta las [estadisticas](http://www.privacidad-online.net/estadisticas-incidencia-de-amenazas-a-la-privacidad/) y recientes [acontecimientos](https://gestion.pe/fotogalerias/son-principales-casos-robo-datos-personales-mundo-233712) sobre la proteccion de informacion de los usuarios. Creemos que concientizar sobre la importancia de cifrar nuestra propia informacion es un paso esencial para las nuevas generacion. Se pretende que este programa presente una UI sencilla y de rápido uso que ofrezca una primera interacción con un sistema de cifrado rapido. La intencion es facilitar su uso mediante talleres a distintas entidades educativas o corporativas.
 
-- La letra A se cifra como D.
-- La palabra CASA se cifra como FDVD.
-- Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-- Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+### Necesidad
 
-En la actualidad, todos los cifrados de sustitución simple se descifran con mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas más complejos de codificación, como el cifrado Vigenère, e incluso tiene aplicación en el sistema ROT13.
+Como público de prueba, hemos elegido a **Laboratoria**. Queremos unirnos al objetivo de ser punta de lanza en esta revolución de inclusión tecnologica y que toda la comunidad, tanto egresadas, estudiantes actuales y equipo sea parte de la iniciativa de hacer un uso consciente de nuestros recursos digitales sin perder de vista la importancia real de la data.
 
-## Resumen del proyecto
+### ¿Por qué **Enigma 2.0**?
 
-¿Qué tengo que hacer exactamente? En este proyecto crearás la primera aplicación web del _bootcamp_. Servirá para que el usuario pueda cifrar y descifrar un texto indicando un desplazamiento específico de caracteres (_offset_).
+En la segunda guerra mundial se aplica el sistema de cifrado de esta máquina (ya inventada y patentada en ) que permitío finalmente romper el cifrado alemán. Es esta la inspiración del nombre en una versión 2.0, que hace referencia a una pseudo-versión digital.
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se necesitaría cifrar un mensaje y pensar en cómo debe ser esa experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?) etc. Algunas ideas de ejemplo:
+### Paleta de colores
 
-- Crear claves seguras para el email.
-- Encriptar/cifrar una tarjeta de crédito.
-- Herramienta de mensajería interna de una organización de derechos humanos en una zona de conflicto.
-- Mensajería secreta para parejas.
+Los colores observados son bastante sobrios y denotan un tono serio, sobrio, elegante y profesional. La combinación esta orientada a crear una armonía entre los elementos, priorizando su función principal, siendo el **cifrar**.
+
+[!Paleta de colores]
+[![Tracking Malte Spitz](https://ibb.co/y0WGrLY)]
 
 
-## Consideraciones generales
+### Testeo e iteración
 
-- Este proyecto se debe resolver de manera individual.
-- El proyecto será entregado subiendo tu código a GitHub (commit/push) y la interfaz será desplegada usando GitHub pages. Si no sabes lo que es GitHub, no te preocupes, lo aprenderás durante este proyecto.
-- Tiempo para completarlo: Toma como referencia 2 semanas. Trabaja durante el primer Sprint (una semana) y al  final, trata de fijar un estimado de cuándo lo terminarás.
 
-## Objetivos de aprendizaje
+### Organización y planificación
 
-En este proyecto aprenderás a construir una aplicación web que interactúe con el usuario a través del navegador y la lógica basada en esa interacción. Dicho en palabras sencillas, aprenderás a:
+Basado en metodología ágil, dividimos las tareas así:
+
+### Kanban Canvas Básico
+
+Luego de realizar nuestro **Sprint Planning** realizamos un tablero con la división de tareas de del squad general y por colaborador. En este podemos ver:
+
+- El Product backlog (_primera columna_): La lista de tareas principales y exigidas por el cliente.
+- El Sprint backlog (_segunda columna_): La lista de tareas secundarias, establecidas por cada colaborador.
+- Doings (_tercera columna_): La tareas que se estan haciendo.
+- Block (_cuarta columna_): La tareas que se encuentran bloqueadas, no se puede avanzar o se requiere de un recurso externo.
+- Done (_quinta columna_): La tareas hechas.
+
+[![Kanban Canvas Básico](https://ibb.co/89nmPm8)](https://trello.com/b/0HpB8J0m/1p-cifrado-cesar)
+
+### Trello
+
+En este tablero, colocamos los requerimientos y pasos para tener una común definición de lo que esta **terminado** y lo que no.
+
+[![Tablero del proyecto](https://ibb.co/89nmPm8)](https://trello.com/b/0HpB8J0m/1p-cifrado-cesar)
+
+### Excell
+
+Aquí tocamos todos los aspectos **UX/UI y recursos** divididos en pestañas:
+
+- Kick off: Contiene el **Lean Canvas** e consultas generales del proyecto.
+- UX Design: Se describe la ideación, paleta de colores,  prototipos e iteraciones.
+- Requirements: Exigencias básicas.
+- Resources: Colocamos las páginas y su relación con el proyecto.
+
+[![Excell](https://ibb.co/Vx86KYp)](https://docs.google.com/spreadsheets/d/1-GJYxHFvcTtkLHjPnkJGCczXnFzk07L0O0qXCXyiwDs/edit?usp=sharing)
 
 - Pintar elementos de formulario en la pantalla usando **HTML** y **CSS**.
 - Permitir al usuario interactuar (**eventos del DOM**) y hacer algo cuando ocurran dichos eventos (cifrar/descifrar).
