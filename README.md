@@ -1,7 +1,8 @@
 # Enigma 2.0
 
 
-![image](https://user-images.githubusercontent.com/43801463/49240072-59330e00-f3d2-11e8-872c-c49da9b0df28.png)
+![_c__users_laboratoria_documents_projects_lim-2018-11-bc-core-am-cipher_src_index html](https://user-images.githubusercontent.com/43801463/49244671-56d6b100-f3de-11e8-82cb-ab4f2bca51ba.png)
+
 
 El gran avance tecnológico nos ha hecho consciente de que estamos vigilados, a través de nuestros móviles, ordenadores y cámaras. Pero como no hacemos nada malo, nos sentimos a salvo. Sin embargo como sociedad cometenemos 3 errores:
 
