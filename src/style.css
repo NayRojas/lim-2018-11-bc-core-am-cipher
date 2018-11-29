@@ -265,6 +265,47 @@ i::before{
   text-align: center;
 }*/
 
+
+footer #footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: gray;
+  padding: 0.5rem;
+  background-color: #000000;
+  bottom: 0;
+}
+
+@media (min-width:1024px){
+  header{
+    display: block;
+  }
+}
+
+@media (min-width:768px){
+  #banner h2{
+    font-size: 1.5em;
+  }
+
+  .intro{
+    font-size: 0.8em;
+  }
+
+  #bienvenida h2{
+    font-size: 2em;
+  }
+
+  #bienvenida p{
+    font-size: 0.9em;
+    padding: 2%;
+  }
+
+  #logo{
+    max-width: 6em;
+    max-height: 6.5em;
+  }
+}
+/*
 footer{
  font-size: 12px;
  color: gray;
@@ -273,5 +314,5 @@ footer{
  bottom: 0;
  width: 100%;
  padding: 0.5rem;
- background-color: #000000;;
+ background-color: #000000;
 }
