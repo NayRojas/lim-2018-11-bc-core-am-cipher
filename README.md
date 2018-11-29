@@ -26,7 +26,7 @@ Esta app web pretende ser el primer recurso que acompañado por un taller introd
 
 2. Luego podrás observar una sección de color gris que te solicita: **clave** y **mensaje**
 
-![paso1](https://user-images.githubusercontent.com/43801463/49247096-783a9b80-f3e4-11e8-8e88-cd6253a8ade1.png)
+![paso1](https://user-images.githubusercontent.com/43801463/49247565-9bb21600-f3e5-11e8-861f-13f418f2281a.png)
 
 3. En la **clave**, introduce un número del 1 en adelante. Este número representa tu número secreto, bien sea para cifrar o descifrar.
 
@@ -50,8 +50,7 @@ Esta app web pretende ser el primer recurso que acompañado por un taller introd
 
 9. Para regresar al inicio, solo debes hacer click en el botón **volver** para empezar de nuevo.
 
-![paso 6](https://user-images.githubusercontent.com/43801463/49247284-e67f5e00-f3e4-11e8-8ab6-5b4f24584370.png)
-
+![paso 6](https://user-images.githubusercontent.com/43801463/49247674-d916a380-f3e5-11e8-9d76-5061195f4b64.png)
 
 
 ## Lean Canvas
