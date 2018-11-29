@@ -1,12 +1,47 @@
 # Enigma 2.0
 
-Enigma 2.0 es una sistema de cifrado basado en el metodo de[cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher), nombrado así por el emperador romano Julio Césa, quien lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
+El gran avance tecnológico nos ha hecho consciente de que estamos vigilados, a través de nuestros móviles, ordenadores y cámaras. Pero como no hacemos nada malo, nos sentimos a salvo. Sin embargo como sociedad cometenemos 3 errores:
 
-![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
+1. Infravalorar la cantidad de información que producimos cada día.
+2. Despreciar el valor de esa información.
+3. Es pensar que nuestro principal problema puede ser una agencia super distante y poderosa.
 
-## Lean Canvas
+Estas entidades encargadas de recolectar nuestros datos, no requieren de grandes recursos y permisos, nosotros ofrecemos esta información voluntariamente, un ejemplo claro de esto es la data que pidió Malte Spitz a su empresa de telefonía en el 2009, que luego de una demanda logro obtener:
 
-Para iniciar se 
+[![Tracking Malte Spitz](https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F303878909_1280x864.jpg&src1=https%3A%2F%2Ff.vimeocdn.com%2Fimages_v6%2Fshare%2Fplay_icon_overlay.png)](https://www.youtube.com/watch?v=J1EKvWot-3c)
+Esta imagen es casi un diario de Malte en el que se muestra los detalles de su vida diaria, a donde va, a quien llama, cuanto tiempo llama, escribe, que descarga, entre muchos otros (Fuente: (https://www.youtube.com/watch?v=NPE7i8wuupk)).
+
+##Iniciativa
+
+Creemos que esta realidad merece nuestra atención, a traves de espacios y material educativo de alto impacto que ademas de generar engagement, resulte en un despertar del valor que realmente tiene la información que compartimos, inocentemente, por cualquier medio digital.
+
+Esta app web pretende ser un recurso que acompañado por una taller introductorio, ofrezca insights de utlidad para cualquier persona que tenga acceso a un dispositivo móvil. Teniendo como **público de prueba** las estudiantes de Laboratoria.
+
+##Lean Canvas
+
+Con el fin de mantener una **metodología agíl** en cada una de las herramientas de planificación y organización de este proyecto, se emplea el **Lean Canvas**, ofreciendo en un formato sencillo los aspectos criticos que definen las directrices del proyecto, ademas de permitir su fácil visualización y optimización en el tiempo.
+
+
+
+###Objetivo general
+Concientizar sobre la privacidad de la información a traves de un metodo de cifrado sencillo para se emplea para compartir información sensible.
+###Objetivo especifico			
+Servirá para que el usuario pueda cifrar y descifrar un texto indicando un desplazamiento específico de caracteres (offset).
+
+- ¿Qué beneficios, cual es el valor que aportará a la organización? (tanto a tu organización como al cliente)										
+Debido a su diseño sencillo y amigable, permite el acercamiento de los complejos sistemas de cifrado y encriptado a las personas, en su entorno cotidiano. Brinda la oportunidad de comprender los motivos por los cuales "proteger nuestros datos" debe ser una tarea del día a día y una desición personal.										
+- ¿Cuál es el alcance del proyecto y sus entregables principales?										
+Scripts/Archivos										
+- ¿Cuáles son las fechas críticas (hitos) del proyecto?										
+Tiempo para completarlo: Toma como referencia 2 semanas. Trabaja durante el primer Sprint (una semana) y al final, trata de fijar un estimado de cuándo lo terminarás.										
+- ¿Cuál es su coste/inversión?										
+Capital intelectual										
+- ¿Cuáles son los principales riesgos asociados al proyecto?										
+Que el sistema de cifrado sea usado para un proposito distinto al original, particularmente a actividades orientadas a agredir, ofender o dañar.										
+- ¿Existe algún supuesto, premisa, restricción o exclusión que tengas que tener en cuenta?										
+Toda la sección de Requirements establecidas en el repositorio del proyecto ( Requirements).										
+
+##Diseño de la Experiencia del Usuario
 
 El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es un tipo de cifrado por sustitución, es decir que cada letra del texto original es reemplazada por otra que se encuentra un número fijo de posiciones (desplazamiento) más adelante en el mismo alfabeto.
 
