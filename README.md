@@ -128,13 +128,13 @@ Luego de realizar nuestro **Sprint Planning** realizamos un Kanban Canvas Básic
 
 En este tablero, colocamos los requerimientos y pasos para tener una común definición de lo que esta **terminado** y lo que no.
 
-![trello](https://user-images.githubusercontent.com/43801463/49239657-4bc95400-f3d1-11e8-9e36-3989ba458526.png)
+![trello](https://user-images.githubusercontent.com/43801463/49239657-4bc95400-f3d1-11e8-9e36-3989ba458526.png)(https://trello.com/b/0HpB8J0m/1p-cifrado-cesar)
 
 ### Excell
 
 Aquí tocamos todos los aspectos **UX/UI y recursos** divididos en pestañas:
 
-![excell](https://user-images.githubusercontent.com/43801463/49239677-5552bc00-f3d1-11e8-82dc-d0f9d968be29.png)
+![excell](https://user-images.githubusercontent.com/43801463/49239677-5552bc00-f3d1-11e8-82dc-d0f9d968be29.png)(https://docs.google.com/spreadsheets/d/1-GJYxHFvcTtkLHjPnkJGCczXnFzk07L0O0qXCXyiwDs/edit?usp=sharing)
 
 
 ## Mejoras futuras
