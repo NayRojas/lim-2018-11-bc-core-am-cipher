@@ -50,27 +50,21 @@ Servirá para que el usuario pueda cifrar y descifrar un texto indicando un desp
 ### Alcance
 
 - **¿Qué beneficios, cual es el valor que aportará a la organización? (tanto a tu organización como al cliente)**		
-
 Debido a su diseño sencillo y amigable, permite el acercamiento de los complejos sistemas de cifrado y encriptado a las personas, en su entorno cotidiano. Brinda la oportunidad de comprender los motivos por los cuales "proteger nuestros datos" debe ser una tarea del día a día y una desición personal.
 
 - **¿Cuál es el alcance del proyecto y sus entregables principales?**
-
 Scripts/Archivos										
 
 - **¿Cuáles son las fechas críticas (hitos) del proyecto?**			
-
 Tiempo para completarlo: Toma como referencia 2 semanas. Trabaja durante el primer Sprint (una semana) y al final, trata de fijar un estimado de cuándo lo terminarás.			
 
 - **¿Cuál es su coste/inversión?**
-
 Capital intelectual				
 
 - **¿Cuáles son los principales riesgos asociados al proyecto?**
-
 Que el sistema de cifrado sea usado para un proposito distinto al original, particularmente a actividades orientadas a agredir, ofender o dañar.					
 
-- **¿Existe algún supuesto, premisa, restricción o exclusión que tengas que tener en cuenta?**
-									
+- **¿Existe algún supuesto, premisa, restricción o exclusión que tengas que tener en cuenta?**								
 Toda la sección de Requirements establecidas en el repositorio del proyecto ( Requirements).
 
 
