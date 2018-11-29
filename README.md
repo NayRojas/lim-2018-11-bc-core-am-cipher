@@ -1,5 +1,8 @@
 # Enigma 2.0
 
+
+![image](https://user-images.githubusercontent.com/43801463/49240072-59330e00-f3d2-11e8-872c-c49da9b0df28.png)
+
 El gran avance tecnológico nos ha hecho consciente de que estamos vigilados, a través de nuestros móviles, ordenadores y cámaras. Pero como no hacemos nada malo, nos sentimos a salvo. Sin embargo como sociedad cometenemos 3 errores:
 
 1. **Infravalorar la cantidad de información que producimos cada día.**
@@ -8,7 +11,6 @@ El gran avance tecnológico nos ha hecho consciente de que estamos vigilados, a 
 
 Estas entidades encargadas de recolectar nuestros datos, no requieren de grandes recursos y permisos, nosotros ofrecemos esta información voluntariamente, un ejemplo claro de esto es la data que pidió Malte Spitz a su empresa de telefonía en el 2009, que luego de una demanda logro obtener casi un [diario](https://www.youtube.com/watch?v=J1EKvWot-3c), en el que se muestra los detalles de su vida diaria, a donde va, a quien llama, cuanto tiempo llama, escribe, que descarga, entre muchos otros (Fuente: (https://www.youtube.com/watch?v=NPE7i8wuupk)).
 
-![image](https://user-images.githubusercontent.com/43801463/49240072-59330e00-f3d2-11e8-872c-c49da9b0df28.png)
 
 ## Iniciativa
 
@@ -21,9 +23,9 @@ Esta app web pretende ser el primer recurso que acompañado por una taller intro
 
 1. Ingresa a https://nayrojas.github.io/lim-2018-11-bc-core-am-cipher/src/
 2. Luego podras observar una sección de color gris que te solicita: **clave** y **mensaje**
-3. En la clave, introduce un número del 1 en adelante. Este número representa tu número secreto, bien sea para cifrar o decifrar.
-4. En el mensaje, introduce el texto que deseas cifrar(Ojo, solo podrás cifrar texto en esta vesión,ni números ni caracteres)
-5. Abajo veras 2 botones, **cifrar** y **decifrar**
+3. En la **clave**, introduce un número del 1 en adelante. Este número representa tu número secreto, bien sea para cifrar o decifrar.
+4. En el **mensaje**, introduce el texto que deseas cifrar (Ojo, solo podrás cifrar texto en esta vesión,ni números ni caracteres).
+5. Abajo veras 2 botones, **cifrar** y **decifrar**.
 6. Al hacer click en **Cifrar** verás tu mensaje cifrado en el mismo campo donde lo escribiste al inicio.
 7. Presiona el icono copiar que vera a la derecha.
 8. Al hacer click en **decifrar**, verás tu mensaje cifrado en el mismo campo donde lo escribiste al inicio y también tendras la opción de copiar.
@@ -122,4 +124,4 @@ Entre las principales se encuentran:
 
 - Mejorar el responsive: anchura maxima estandar de dispositivos.
 - Añadir una sección debajo del formulario que brinde información sobre la iniciativa, el taller.
-- Permitir que el usuario pueda subscribirse para recibir actualizaciones y noticias. 
+- Permitir que el usuario pueda subscribirse para recibir actualizaciones y noticias.
