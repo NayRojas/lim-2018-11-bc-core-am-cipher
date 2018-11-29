@@ -114,9 +114,9 @@ Los colores observados son bastante sobrios y denotan un tono serio, sobrio, ele
 
 ### Prototipado: Testeo e interación
 
-![image](https://user-images.githubusercontent.com/43801463/49241381-afee1700-f3d5-11e8-8306-c949ecb6e24f.png)
-
 Se mostró el primer sketch a las colaboradoras del equipo y se sugirió optimizar los colores a unos que denoten mas profesionalismo y mejorar el orden de los botones. Luego se muestra el contenido a familiares en el **segundo sprint**, señalaron evitar el color gris para el botón de descifrar ya que se pierde en las opciones que tiene el usuario.
+
+![prototipos](https://user-images.githubusercontent.com/43801463/49247842-4e827400-f3e6-11e8-950c-ebc56552a672.png)
 
 
 
