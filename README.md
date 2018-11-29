@@ -2,9 +2,9 @@
 
 El gran avance tecnológico nos ha hecho consciente de que estamos vigilados, a través de nuestros móviles, ordenadores y cámaras. Pero como no hacemos nada malo, nos sentimos a salvo. Sin embargo como sociedad cometenemos 3 errores:
 
-**1. Infravalorar la cantidad de información que producimos cada día.
-2. Despreciar el valor de esa información.
-3. Es pensar que nuestro principal problema puede ser una agencia super distante y poderosa.**
+**1. Infravalorar la cantidad de información que producimos cada día.**
+**2. Despreciar el valor de esa información.**
+**3. Es pensar que nuestro principal problema puede ser una agencia super distante y poderosa.**
 
 Estas entidades encargadas de recolectar nuestros datos, no requieren de grandes recursos y permisos, nosotros ofrecemos esta información voluntariamente, un ejemplo claro de esto es la data que pidió Malte Spitz a su empresa de telefonía en el 2009, que luego de una demanda logro obtener:
 
@@ -34,17 +34,17 @@ Servirá para que el usuario pueda cifrar y descifrar un texto indicando un desp
 
 ### Alcance
 
-- ¿Qué beneficios, cual es el valor que aportará a la organización? (tanto a tu organización como al cliente)										
+- **¿Qué beneficios, cual es el valor que aportará a la organización? (tanto a tu organización como al cliente)**										
 Debido a su diseño sencillo y amigable, permite el acercamiento de los complejos sistemas de cifrado y encriptado a las personas, en su entorno cotidiano. Brinda la oportunidad de comprender los motivos por los cuales "proteger nuestros datos" debe ser una tarea del día a día y una desición personal.										
-- ¿Cuál es el alcance del proyecto y sus entregables principales?										
+- **¿Cuál es el alcance del proyecto y sus entregables principales?**										
 Scripts/Archivos										
-- ¿Cuáles son las fechas críticas (hitos) del proyecto?										
+- **¿Cuáles son las fechas críticas (hitos) del proyecto?**										
 Tiempo para completarlo: Toma como referencia 2 semanas. Trabaja durante el primer Sprint (una semana) y al final, trata de fijar un estimado de cuándo lo terminarás.										
-- ¿Cuál es su coste/inversión?										
+- **¿Cuál es su coste/inversión?**										
 Capital intelectual										
-- ¿Cuáles son los principales riesgos asociados al proyecto?										
+- **¿Cuáles son los principales riesgos asociados al proyecto?**										
 Que el sistema de cifrado sea usado para un proposito distinto al original, particularmente a actividades orientadas a agredir, ofender o dañar.										
-- ¿Existe algún supuesto, premisa, restricción o exclusión que tengas que tener en cuenta?										
+- **¿Existe algún supuesto, premisa, restricción o exclusión que tengas que tener en cuenta?**										
 Toda la sección de Requirements establecidas en el repositorio del proyecto ( Requirements).										
 
 ## Diseño de la Experiencia del Usuario
@@ -65,8 +65,7 @@ En la segunda guerra mundial se aplica el sistema de cifrado de esta máquina (y
 
 Los colores observados son bastante sobrios y denotan un tono serio, sobrio, elegante y profesional. La combinación esta orientada a crear una armonía entre los elementos, priorizando su función principal, siendo el **cifrar**.
 
-[!Paleta de colores]
-[![Tracking Malte Spitz](https://ibb.co/y0WGrLY)]
+![paleta de colores](https://user-images.githubusercontent.com/43801463/49239618-2d635880-f3d1-11e8-8c06-49ff0ec471a5.png)
 
 
 ### Testeo e iteración
@@ -76,7 +75,7 @@ Los colores observados son bastante sobrios y denotan un tono serio, sobrio, ele
 
 Basado en metodología ágil, dividimos las tareas así:
 
-### Kanban Canvas Básico
+## Kanban Canvas Básico
 
 Luego de realizar nuestro **Sprint Planning** realizamos un tablero con la división de tareas de del squad general y por colaborador. En este podemos ver:
 
@@ -88,13 +87,13 @@ Luego de realizar nuestro **Sprint Planning** realizamos un tablero con la divis
 
 [![Kanban Canvas Básico](https://ibb.co/89nmPm8)](https://trello.com/b/0HpB8J0m/1p-cifrado-cesar)
 
-### Trello
+## Trello
 
 En este tablero, colocamos los requerimientos y pasos para tener una común definición de lo que esta **terminado** y lo que no.
 
-[![Tablero del proyecto](https://ibb.co/89nmPm8)](https://trello.com/b/0HpB8J0m/1p-cifrado-cesar)
+![trello](https://user-images.githubusercontent.com/43801463/49239657-4bc95400-f3d1-11e8-9e36-3989ba458526.png)
 
-### Excell
+## Excell
 
 Aquí tocamos todos los aspectos **UX/UI y recursos** divididos en pestañas:
 
@@ -103,17 +102,7 @@ Aquí tocamos todos los aspectos **UX/UI y recursos** divididos en pestañas:
 - Requirements: Exigencias básicas.
 - Resources: Colocamos las páginas y su relación con el proyecto.
 
-[![Excell](https://ibb.co/Vx86KYp)](https://docs.google.com/spreadsheets/d/1-GJYxHFvcTtkLHjPnkJGCczXnFzk07L0O0qXCXyiwDs/edit?usp=sharing)
-
-- Pintar elementos de formulario en la pantalla usando **HTML** y **CSS**.
-- Permitir al usuario interactuar (**eventos del DOM**) y hacer algo cuando ocurran dichos eventos (cifrar/descifrar).
-- Manipular _**strings**_ (cadenas de texto).
-- Usar **control de flujo** (bucles, condicionales, ...).
-- Actualizar la pantalla con los resultados (**manipular el DOM**).
-- **Implementar funciones** dada una descripción de su comportamiento.
-- Verificar tu implementación con **pruebas unitarias**.
-- Entender las **necesidades del usuario** y cómo proponer una solución.
-- Organizar tu tiempo y priorizar tareas en un entorno de **alta incertidumbre**.
+![excell](https://user-images.githubusercontent.com/43801463/49239677-5552bc00-f3d1-11e8-82dc-d0f9d968be29.png)
 
 ## Parte Obligatoria
 
