@@ -16,6 +16,7 @@ cifrarButton.addEventListener('click', () => {
 		//Mostrar botón de volver
 		document.getElementById('user-options').style.visibility ="hidden";
 		document.getElementById('erase').style.visibility ="visible";
+		document.getElementById('copiar').style.visibility ="visible";
 	//Mostrar estilos al cifrar
 		document.getElementById('message').style.borderColor = "lightgray";
 		document.getElementById('message').style.borderWidth = "thick";
@@ -62,6 +63,7 @@ descifrarButton.addEventListener('click', () => {
 		//Mostrar botón de volver
 		document.getElementById('user-options').style.visibility ="hidden";
 		document.getElementById('erase').style.visibility ="visible";
+		document.getElementById('copiar').style.visibility ="visible";
 		//Mostrar estilos al decifrar
 		document.getElementById('message').style.borderColor = "lightgray";
 		document.getElementById('message').style.borderWidth = "thick";
@@ -87,9 +89,9 @@ descifrarButton.addEventListener('click', () => {
 			userKey.readOnly = false;
 		} else {
 			cipher.decode(message, key);
-//Bloqueo de edición del area de texto
-document.getElementById('message').readOnly = true;
-estiloMensajeCifrado ();
+			//Bloqueo de edición del area de texto
+			document.getElementById('message').readOnly = true;
+			estiloMensajeCifrado ();
 		}
 
 //Remplazo del area de texto
@@ -101,7 +103,7 @@ estiloMensajeCifrado ();
 	});
 
 
-//*******************************EVENTO BORRAR*******************************
+//*******************************EVENTO VOLVER*******************************
 borrarButton.addEventListener('click', () => {
 	//let message = userMessage.value;
 	//let key = userKey.value;
@@ -120,6 +122,7 @@ const borrar = () => {
 
 const volver = () => {
 	document.getElementById('user-options').style.visibility ="visible";
+	document.getElementById('copiar').style.visibility ="hidden";
 	document.getElementById('steps2').style.color = "gray";
 	document.getElementById('steps1').style.color = "gray";
 	document.getElementById('message').style.borderColor = "#d9d9d9";
@@ -129,4 +132,13 @@ const volver = () => {
 	campoVacio.style.color = "red";
 	document.getElementById('message').readOnly = false;
 };
-//*****************************FUNCION CONPARTIR*******************************
+//*****************************FUNCION COPIAR*******************************
+
+let copyText = document.getElementById('copiar');
+
+copyText.addEventListener('click', () => {
+   const resultado = document.getElementById("message").value;
+   //resultado.select();
+   // Copia el texto seleccionado
+   document.execCommand("copy");
+});

@@ -12,6 +12,8 @@ body{
   /*background-image: url("tiny-squares.png");*/
 }
 
+/************ESTILO DEL ENCABEZADO*****************/
+
 header{
     width: 100%;
     height: 50px;
@@ -32,6 +34,8 @@ header{
   height: 3.5%;
 }
 
+/************ESTILO MENSAJE DE ERROR*****************/
+
 .error{
   color: red;
   font-size: 0.8em;
@@ -43,6 +47,8 @@ header{
   width:100%;
   margin: auto;
 }
+
+
 
 h1{
   text-align: center;
@@ -59,6 +65,8 @@ section{
   width: 100%;
   margin-bottom: 25px;
 }
+
+/************ESTILO DEL BANNER *****************/
 
 #banner{
   margin-top: 50px;
@@ -88,6 +96,7 @@ section{
   color:rgba(192,192,192,0.80);
   text-align: left;
   margin-left: 2%;
+  font-size: 1em;
 }
 
 #bienvenida {
@@ -99,6 +108,8 @@ section{
   font-size: 38px;
   margin-top: 1rem;
 }
+
+/************ESTILO DE FORMULRIO*****************/
 
 #form{
   padding: 1em;
@@ -114,6 +125,8 @@ section{
   -moz-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
   box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
 }
+
+/************ESTILO DEL LOS IDENTIFICADOS DE INPUTS*****************/
 
 .steps{
   text-align: center;
@@ -138,10 +151,6 @@ textarea{
   font-family: 'Muli', sans-serif;
 }
 
-i::before{
-  content: "\f0c5";
-}
-
 #offset{
   text-align: left;
   border-radius: 5px;
@@ -151,9 +160,10 @@ i::before{
   padding: 5px;
   margin: 3%;
   font-family: 'Muli', sans-serif;
-
 }
 
+
+/************ESTILO DE BOTONES*****************/
 #main-buttons{
   display: block;
   margin-left: 5rem;
@@ -251,6 +261,36 @@ i::before{
   text-decoration: none;
 }
 
+#copiar {
+  background: #d6d6d6;
+  background-image: -webkit-linear-gradient(top, #d6d6d6, #808080);
+  background-image: -moz-linear-gradient(top, #d6d6d6, #808080);
+  background-image: -ms-linear-gradient(top, #d6d6d6, #808080);
+  background-image: -o-linear-gradient(top, #d6d6d6, #808080);
+  background-image: linear-gradient(to bottom, #d6d6d6, #808080);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 5px;
+  font-family: 'Muli', sans-serif;
+  color: black;
+  font-size: 0.8em;
+  letter-spacing: 0.4em;
+  font-weight: bold;
+  padding: 8px 15px 8px 15px;
+  text-decoration: none;
+  margin: 1em;
+}
+
+#copiar:hover {
+  background: #000000;
+  color: white;
+  background-image: -webkit-linear-gradient(top, #000000, #474747);
+  background-image: -moz-linear-gradient(top, #000000, #474747);
+  background-image: -ms-linear-gradient(top, #000000, #474747);
+  background-image: -o-linear-gradient(top, #000000, #474747);
+  background-image: linear-gradient(to bottom, #000000, #474747);
+  text-decoration: none;
+}
 
   /*#footer{
 
@@ -292,7 +332,7 @@ footer #footer{
   }
 
   #bienvenida h2{
-    font-size: 2em;
+    font-size: 3em;
   }
 
   /*#bienvenida p{
