@@ -1,7 +1,6 @@
 
-
 //****************************FUNCION CIFRAR*******************************
-const cifrar = (message, key) => {
+const cifrar = (key, message) => {
 let numAscii;
 let resultC = "";
 //RECORRIDO EL MENSAJE DEL USUARIO
@@ -29,7 +28,7 @@ let resultC = "";
 	};
 
 //**************************FUNCION DESCIFRAR*******************************
-	const descifrar = (message, key) => {
+	const descifrar = (key, message) => {
 	let numAscii;
   let resultD = "";
 	let offset = parseInt(key) % 26;
@@ -37,17 +36,17 @@ let resultC = "";
 			for (let i = 0; i < message.length; i++){
 				numAscii = message.charCodeAt(i);
 
-	//Asimila mayúsculas
+//Asimila mayúsculas
 				if (numAscii >= 65 && numAscii <= 90){
 					numAscii = String.fromCharCode ((numAscii + 65 - offset) % 26 + 65);
 					resultD += numAscii;
 
-	//Asimila minisculas
+//Asimila minisculas
 				} else if (numAscii >= 97 && numAscii <= 122){
 					numAscii = String.fromCharCode((numAscii - 97 - offset) % 26 + 97);
 					resultD += numAscii;
 
-	//Asimila el espacio " "
+//Asimila el espacio " "
 				} else if (numAscii === 32){
 					resultD += " ";
 				}

@@ -13,11 +13,13 @@ cifrarButton.addEventListener('click', () => {
 	let key = userKey.value;
 
 	const estiloMensajeCifrado = () =>{
-		//Mostrar botón de volver
+//Mostrar botón de volver
 		document.getElementById('user-options').style.visibility ="hidden";
 		document.getElementById('erase').style.visibility ="visible";
 		document.getElementById('copiar').style.visibility ="visible";
-	//Mostrar estilos al cifrar
+		document.getElementById('share-whatsapp').style.visibility ="visible";
+		document.getElementById('share-gmail').style.visibility ="visible";
+//Mostrar estilos para identificar mensaje CIFRADO
 		document.getElementById('message').style.borderColor = "lightgray";
 		document.getElementById('message').style.borderWidth = "thick";
 		document.getElementById('message').style.textAlign = "center";
@@ -30,7 +32,7 @@ cifrarButton.addEventListener('click', () => {
 		campoVacio.style.fontWeight = "bolder";
 	};
 
-	//Condición si hay espacios vacios y sino ejecutar función
+//Condición para validar espacios vacios
 	if (userMessage.value === ""){
 		campoVacio.innerHTML = "Ingresa tu mensaje";
 		userMessage.readOnly = false;
@@ -38,18 +40,16 @@ cifrarButton.addEventListener('click', () => {
 		numVacio.innerHTML = "Ingresa tu número clave";
 		userKey.readOnly = false;
 	} else {
-		cipher.encode(message, key);
-//Bloqueo de edición del area de texto
+		cipher.encode(key, message);
+//Bloqueo de edición del area de texto una vez se muestra el resultado
 		document.getElementById('message').readOnly = true;
 		estiloMensajeCifrado ();
 	}
 
-	//Remplazo del texto en el area de texto
+//Remplazo del texto en el textarea
 	let userMessageDescifrado = document.getElementById('message').value;
-	let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.encode(message, key));
+	let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.encode(key, message));
 	document.getElementById("message").value = replace;
-
-
 });
 
 
@@ -60,11 +60,13 @@ descifrarButton.addEventListener('click', () => {
 	let key = userKey.value;
 
 	const estiloMensajeCifrado = () =>{
-		//Mostrar botón de volver
+//Mostrar botón de volver
 		document.getElementById('user-options').style.visibility ="hidden";
 		document.getElementById('erase').style.visibility ="visible";
 		document.getElementById('copiar').style.visibility ="visible";
-		//Mostrar estilos al decifrar
+		document.getElementById('share-whatsapp').style.visibility ="visible";
+		document.getElementById('share-gmail').style.visibility ="visible";
+//Mostrar estilos al decifrar
 		document.getElementById('message').style.borderColor = "lightgray";
 		document.getElementById('message').style.borderWidth = "thick";
 		document.getElementById('message').style.textAlign = "center";
@@ -78,7 +80,7 @@ descifrarButton.addEventListener('click', () => {
 		campoVacio.style.fontWeight = "bolder";
 	};
 
-	//Condición si hay espacios vacios y sino ejecutar función
+//Condición si hay espacios vacios y sino ejecutar función
 		if (userMessage.value === ""){
 			campoVacio.innerHTML = "Ingresa tu mensaje";
 			numVacio.innerHTML = "";
@@ -88,41 +90,37 @@ descifrarButton.addEventListener('click', () => {
 			numVacio.innerHTML = "Ingresa tu número clave";
 			userKey.readOnly = false;
 		} else {
-			cipher.decode(message, key);
-			//Bloqueo de edición del area de texto
+			cipher.decode(key, message);
+//Bloqueo de edición del area de texto
 			document.getElementById('message').readOnly = true;
 			estiloMensajeCifrado ();
 		}
 
 //Remplazo del area de texto
 			let userMessageDescifrado = document.getElementById('message').value;
-			let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.decode(message, key));
+			let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.decode(key, message));
 			document.getElementById("message").value = replace;
-
-
 	});
 
 
-//*******************************EVENTO VOLVER*******************************
+//*******************************EVENTO NUEVO MENSAJE*******************************
 borrarButton.addEventListener('click', () => {
-	//let message = userMessage.value;
-	//let key = userKey.value;
 	borrar()
 	volver()
 });
 
 const borrar = () => {
-	document.getElementById("message").value = "";
 	document.getElementById("offset").value = "";
+	document.getElementById("message").value = "";
 	numVacio.innerHTML = "";
 	campoVacio.innerHTML = "";
-	//window.cipher.encode(message, key) = "";
-	//window.cipher.decode(message, key) = "";
 };
 
 const volver = () => {
 	document.getElementById('user-options').style.visibility ="visible";
 	document.getElementById('copiar').style.visibility ="hidden";
+	document.getElementById('share-whatsapp').style.visibility ="hidden";
+	document.getElementById('share-gmail').style.visibility ="hidden";
 	document.getElementById('steps2').style.color = "gray";
 	document.getElementById('steps1').style.color = "gray";
 	document.getElementById('message').style.borderColor = "#d9d9d9";
@@ -137,8 +135,8 @@ const volver = () => {
 let copyText = document.getElementById('copiar');
 
 copyText.addEventListener('click', () => {
-   const resultado = document.getElementById("message").value;
-   //resultado.select();
-   // Copia el texto seleccionado
+   const resultado = resultC;
+   resultado.select();
+   //Copia el texto seleccionado
    document.execCommand("copy");
 });
