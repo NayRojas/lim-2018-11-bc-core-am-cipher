@@ -1,11 +1,10 @@
-let userMessage = document.getElementById('message');
+let userMessage = document.getElementById('string');
 let userKey = document.getElementById('offset');
-let cifrarButton = document.getElementById('cifrar-button');
-let descifrarButton = document.getElementById('descifrar-button');
-let borrarButton = document.getElementById('erase');
-let campoVacio = document.getElementById('error-campo-vacio');
-let numVacio = document.getElementById('error-num-vacio');
-
+let cifrarButton = document.getElementById('encode-button');
+let descifrarButton = document.getElementById('decode-button');
+let newMessage = document.getElementById('new-message');
+let messageEmptyString = document.getElementById('empty-string');
+let messageEmptyOffset = document.getElementById('empty-offset');
 
 //**********************EVENTO DEL BOTON CIFRAR**************************
 cifrarButton.addEventListener('click', () => {
@@ -13,130 +12,105 @@ cifrarButton.addEventListener('click', () => {
 	let key = userKey.value;
 
 	const estiloMensajeCifrado = () =>{
-//Mostrar botón de volver
-		document.getElementById('user-options').style.visibility ="hidden";
-		document.getElementById('erase').style.visibility ="visible";
-		document.getElementById('copiar').style.visibility ="visible";
-		document.getElementById('share-whatsapp').style.visibility ="visible";
-		document.getElementById('share-gmail').style.visibility ="visible";
+//Manipulación de botones
+		document.getElementById('main-buttons').style.visibility ="hidden";
+		document.getElementById('new-message').style.visibility ="visible";
 //Mostrar estilos para identificar mensaje CIFRADO
-		document.getElementById('message').style.borderColor = "lightgray";
-		document.getElementById('message').style.borderWidth = "thick";
-		document.getElementById('message').style.textAlign = "center";
-		document.getElementById('message').style.fontWeight = "bolder";
+		document.getElementById('string').style.borderColor = "lightgray";
+		document.getElementById('string').style.borderWidth = "thick";
+		document.getElementById('string').style.textAlign = "center";
+		document.getElementById('string').style.fontWeight = "bolder";
 		document.getElementById('steps2').style.color = "red";
 		document.getElementById('steps2').style.fontWeight = "bolder";
-		campoVacio.innerHTML = "CIFRADO";
-		campoVacio.style.letterSpacing = "1rem";
-		campoVacio.style.fontSize = "0.9	rem";
-		campoVacio.style.fontWeight = "bolder";
+		messageEmptyString.innerHTML = "CIFRADO";
+		messageEmptyOffset.innerHTML = " ";
+		messageEmptyString.style.letterSpacing = "1rem";
+		messageEmptyString.style.fontSize = "0.9	rem";
+		messageEmptyString.style.fontWeight = "bolder";
 	};
 
-//Condición para validar espacios vacios
+//Condición si hay espacios vacios y sino ejecutar función
 	if (userMessage.value === ""){
-		campoVacio.innerHTML = "Ingresa tu mensaje";
+		messageEmptyString.innerHTML = "Ingresa tu mensaje";
 		userMessage.readOnly = false;
 	} else if (userKey.value === ""){
-		numVacio.innerHTML = "Ingresa tu número clave";
+		messageEmptyOffset.innerHTML = "Ingresa tu número clave";
 		userKey.readOnly = false;
 	} else {
 		cipher.encode(key, message);
 //Bloqueo de edición del area de texto una vez se muestra el resultado
-		document.getElementById('message').readOnly = true;
+		document.getElementById('string').readOnly = true;
 		estiloMensajeCifrado ();
+//Remplazo del texto en el textarea para mostrar resultado
+		let userMessageDescifrado = document.getElementById('string').value;
+		let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.encode(key, message));
+		document.getElementById("string").value = replace;
 	}
-
-//Remplazo del texto en el textarea
-	let userMessageDescifrado = document.getElementById('message').value;
-	let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.encode(key, message));
-	document.getElementById("message").value = replace;
 });
 
-
-
-//*****************EVENTO PARA BOTON DESCIFRAR*****************************
+//*****************EVENTO PARA BOTON DESCIFRAR************************
 descifrarButton.addEventListener('click', () => {
 	let message = userMessage.value;
 	let key = userKey.value;
 
 	const estiloMensajeCifrado = () =>{
-//Mostrar botón de volver
-		document.getElementById('user-options').style.visibility ="hidden";
-		document.getElementById('erase').style.visibility ="visible";
-		document.getElementById('copiar').style.visibility ="visible";
-		document.getElementById('share-whatsapp').style.visibility ="visible";
-		document.getElementById('share-gmail').style.visibility ="visible";
-//Mostrar estilos al decifrar
-		document.getElementById('message').style.borderColor = "lightgray";
-		document.getElementById('message').style.borderWidth = "thick";
-		document.getElementById('message').style.textAlign = "center";
-		document.getElementById('message').style.fontWeight = "bolder";
+//Manipulación de botones
+		document.getElementById('main-buttons').style.visibility ="hidden";
+		document.getElementById('new-message').style.visibility ="visible";
+//Mostrar estilos para identificar mensaje DESCIFRADO
+		document.getElementById('string').style.borderColor = "lightgray";
+		document.getElementById('string').style.borderWidth = "thick";
+		document.getElementById('string').style.textAlign = "center";
+		document.getElementById('string').style.fontWeight = "bolder";
 		document.getElementById('steps2').style.color = "blue";
 		document.getElementById('steps2').style.fontWeight = "bolder";
-		campoVacio.innerHTML = "DESCIFRADO";
-		campoVacio.style.color = "blue";
-		campoVacio.style.letterSpacing = "1rem";
-		campoVacio.style.fontSize = "0.9	rem";
-		campoVacio.style.fontWeight = "bolder";
+		messageEmptyString.innerHTML = "DESCIFRADO";
+		messageEmptyOffset.innerHTML = " ";
+		messageEmptyString.style.color = "blue";
+		messageEmptyString.style.letterSpacing = "1rem";
+		messageEmptyString.style.fontSize = "0.9	rem";
+		messageEmptyString.style.fontWeight = "bolder";
 	};
 
 //Condición si hay espacios vacios y sino ejecutar función
 		if (userMessage.value === ""){
-			campoVacio.innerHTML = "Ingresa tu mensaje";
-			numVacio.innerHTML = "";
+			messageEmptyString.innerHTML = "Ingresa tu mensaje";
 			userMessage.readOnly = false;
-		} else if (userKey.value === "0"){
-			campoVacio.innerHTML = "";
-			numVacio.innerHTML = "Ingresa tu número clave";
+		} else if (userKey.value === ""){
+			messageEmptyOffset.innerHTML = "Ingresa tu número clave";
 			userKey.readOnly = false;
 		} else {
 			cipher.decode(key, message);
-//Bloqueo de edición del area de texto
-			document.getElementById('message').readOnly = true;
+//Bloqueo de edición del area de texto una vez se muestra el resultado
+			document.getElementById('string').readOnly = true;
 			estiloMensajeCifrado ();
-		}
-
-//Remplazo del area de texto
-			let userMessageDescifrado = document.getElementById('message').value;
+//Remplazo del texto en el textarea para mostrar resultado
+			let userMessageDescifrado = document.getElementById('string').value;
 			let replace = userMessageDescifrado.replace( userMessageDescifrado, window.cipher.decode(key, message));
-			document.getElementById("message").value = replace;
+			document.getElementById("string").value = replace;
+		}
 	});
 
-
 //*******************************EVENTO NUEVO MENSAJE*******************************
-borrarButton.addEventListener('click', () => {
+newMessage.addEventListener('click', () => {
 	borrar()
 	volver()
 });
 
 const borrar = () => {
 	document.getElementById("offset").value = "";
-	document.getElementById("message").value = "";
-	numVacio.innerHTML = "";
-	campoVacio.innerHTML = "";
+	document.getElementById("string").value = "";
+	messageEmptyOffset.innerHTML = "";
+	messageEmptyString.innerHTML = "";
 };
 
 const volver = () => {
-	document.getElementById('user-options').style.visibility ="visible";
-	document.getElementById('copiar').style.visibility ="hidden";
-	document.getElementById('share-whatsapp').style.visibility ="hidden";
-	document.getElementById('share-gmail').style.visibility ="hidden";
+	document.getElementById('main-buttons').style.visibility ="visible";
+	document.getElementById('new-message').style.visibility ="hidden";
 	document.getElementById('steps2').style.color = "gray";
-	document.getElementById('steps1').style.color = "gray";
-	document.getElementById('message').style.borderColor = "#d9d9d9";
-	document.getElementById('message').style.textAlign = "left";
 	document.getElementById('steps2').style.fontWeight = "lighter";
-	document.getElementById('erase').style.visibility ="hidden";
-	campoVacio.style.color = "red";
-	document.getElementById('message').readOnly = false;
+	document.getElementById('steps1').style.color = "gray";
+	document.getElementById('string').style.borderColor = "#d9d9d9";
+	document.getElementById('string').style.textAlign = "left";
+	document.getElementById('string').readOnly = false;
 };
-//*****************************FUNCION COPIAR*******************************
-
-let copyText = document.getElementById('copiar');
-
-copyText.addEventListener('click', () => {
-   const resultado = resultC;
-   resultado.select();
-   //Copia el texto seleccionado
-   document.execCommand("copy");
-});

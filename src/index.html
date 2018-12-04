@@ -4,89 +4,62 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width= device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya|Questrial" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Enigma 2.0</title>
   </head>
+
   <body>
-
-<!--Bienvenida del programa-->
-<header class= "contenedor">
-  <div class="bienvenida">
-    <img id="logo" src="chip.png">
-    <h1 class="icon-lock">ENIGMA 2.0</h1>
-  </div>
-</header>
-
-
-<!--Banner de inicio-->
-<main>
-  <section id="banner">
-    <img src="banner.png" alt="laptop">
-    <div class="contenedor">
-      <h2>Tu privacidad es un derecho que no tiene precio </h2>
-      <p class = "intro"> Somos una empresa sin fines de lucro, nuestra principal motivación es proteger tu información </p>
-    </div>
-  </section>
-
-  <section id="bienvenida">
-    <h2> Bienvenido al Encriptador de Mensajes Gratuito</h2>
+<!--BIENVENIDA AL PROGRAMA-->
+  <header class= "classic-container">
     <div>
-      <img id="steps123" src="steps.png" alt="pasos-para-usabilidad">
+      <img id="logo" src="images/chip.png" alt="escudo-tipo-logo">
+      <h1 class="icon-lock">ENIGMA 2.0</h1>
     </div>
-  </section>
-</main>
-<section id= "form">
-  <div class="inputs">
-    <!--El usuario selecciona su número clave-->
-      <section class= "contenedor">
-        <div id="user-key-number">
-            <label for="secondtStep"></label>
-            <span class="steps" id="steps1">CLAVE</span>
-            <p class="error" id= "error-num-vacio"></p>
-            <div class="description-for-offset">
-              <input id ="offset" type="number" min="1"  value="" placeholder="Tu número clave aquí...">
-            </div>
-          </div>
-      </section>
-
-    <!--Aquí comienza a funcionar el programa - El usuario introduce el mensaje-->
-    <div class= "contenedor">
-      <section id="user-message">
-          <span class="steps" id="steps2">MENSAJE</span>
-          <p class="error" id= "error-campo-vacio"></p>
-          <div class="myMessage">
-            <textarea name="message" id="message" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." ></textarea>
-          </div>
-<!--*************El usuario comparte************-->
-          <aside>
-            <div class="btn-copiar">
-              <input id="copiar" type="image" src="copy.png" alt="copiar-texto" title="Copia tu mensaje" style= "visibility:hidden"/>
-              <input id="share-whatsapp" type="image" src="whatsapp.png" alt="compartir-texto" title="Comparte por Whatsapp" style= "visibility:hidden"/>
-              <input id="share-gmail" type="image" src="gmail.png" alt="compartir-texto" title="Comparte por email" style= "visibility:hidden"/>
-            </div>
-          </aside>
-      </section>
-    </div>
-
-<!--*************El usuario selecciona si desea cifrar o descifrar************-->
-    <section id="user-options">
-        <div id="main-buttons">
-<!--Aqui el usuario CIFRA -->
-          <div id="first-button">
-            <button id="cifrar-button" type="button" name="Cifrar" class="w3-button w3-deep-orange">CIFRAR</button>
-          </div>
-<!--Aqui el usuario DESCIFRA-->
-          <div id="second-button">
-            <button id="descifrar-button"  type="button" name="descifrar" class="w3-button w3-orange">DESCIFRAR</button>
-          </d iv>
-        </div>
+  </header>
+  <main>
+    <section id="banner"><!--Banner introductorio del proyecto-->
+      <img src="images/banner.png" alt="fondo-referencial-con-celular">
+      <div class="classic-container">
+        <h2>Tu privacidad es un derecho que no tiene precio </h2>
+        <p> Somos una empresa sin fines de lucro, nuestra principal motivación es proteger tu información </p>
+      </div>
     </section>
-  </div>
-<!--Aqui el usuario COPIA O VUELVE AL INICIO-->
-  <button id="erase" type="button" name="borrador-inicio" style= "visibility:hidden">NUEVO MENSAJE</button>
-</section>
+    <section id="welcome-to-cipher"><!--Párrafo introductorio al encriptador y pasos-->
+      <h2> Bienvenido al Encriptador de Mensajes Gratuito</h2>
+      <div>
+        <img id="usability-steps" src="images/steps.png" alt="pasos-para-usabilidad">
+      </div>
+    </section>
+  </main>
+
+  <!--INPUTS DEL PROGRAMA (offset, string)-->
+  <section id= "inputs">
+    <div class= "classic-container">
+      <span class="steps" id="steps1">CLAVE</span>
+      <p class="error" id= "empty-offset"></p>
+      <div><!--El usuario introduce el offset-->
+        <input id ="offset" type="number" min="1"  value="" placeholder="Tu número clave aquí...">
+      </div>
+    </div>
+    <div class= "classic-container">
+      <span class="steps" id="steps2">MENSAJE</span>
+      <p class="error" id="empty-string"></p>
+      <div><!--El usuario introduce el mensaje-->
+        <textarea name="message" id="string" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." ></textarea>
+      </div>
+    </div>
+<!--BOTONES-->
+    <section>
+      <div id="main-buttons" style="visibility:visible">
+        <!--Aqui el usuario CIFRA-->
+        <button id="encode-button" type="button" name="Cifrar" class="w3-button w3-deep-orange">CIFRAR</button>
+        <!--Aqui el usuario DESCIFRA-->
+        <button id="decode-button"  type="button" name="descifrar" class="w3-button w3-orange">DESCIFRAR</button>
+      </div>
+      <!--Aqui el usuario ESCRIBE NUEVO MENSAJE-->
+      <button id="new-message" type="button" name="borrador-e-inicio" style="visibility:hidden">NUEVO MENSAJE</button>
+    </section>
+  </section>
 
 <footer>
   <div id="footer">
