@@ -13,15 +13,15 @@
   <header class= "classic-container">
     <div>
       <img id="logo" src="images/chip.png" alt="escudo-tipo-logo">
-      <h1 class="icon-lock">ENIGMA 2.0</h1>
+      <h1 class="icon-lock text-center">ENIGMA 2.0</h1>
     </div>
   </header>
   <main>
     <section id="banner"><!--Banner introductorio del proyecto-->
       <img src="images/banner.png" alt="fondo-referencial-con-celular">
       <div class="classic-container">
-        <h2>Tu privacidad es un derecho que no tiene precio </h2>
-        <p> Somos una empresa sin fines de lucro, nuestra principal motivación es proteger tu información </p>
+        <h2 class="text-align">Tu privacidad es un derecho que no tiene precio </h2>
+        <p class="text-align"> Somos una empresa sin fines de lucro, nuestra principal motivación es proteger tu información </p>
       </div>
     </section>
     <section id="welcome-to-cipher"><!--Párrafo introductorio al encriptador y pasos-->
@@ -38,14 +38,14 @@
       <span class="steps" id="steps1">CLAVE</span>
       <p class="error" id= "empty-offset"></p>
       <div><!--El usuario introduce el offset-->
-        <input id ="offset" type="number" min="1"  value="" placeholder="Tu número clave aquí...">
+        <input id ="offset" type="number" min="1"  value="" placeholder="Tu número clave aquí..." class ="text-inputs text-align">
       </div>
     </div>
     <div class= "classic-container">
       <span class="steps" id="steps2">MENSAJE</span>
       <p class="error" id="empty-string"></p>
       <div><!--El usuario introduce el mensaje-->
-        <textarea name="message" id="string" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." ></textarea>
+        <textarea name="message" id="string" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." class ="text-inputs text-align"></textarea>
       </div>
     </div>
 <!--BOTONES-->
