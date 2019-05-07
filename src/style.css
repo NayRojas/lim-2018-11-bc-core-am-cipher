@@ -41,7 +41,7 @@ header{
 }
 
 header .classic-container{
-  display: table;
+  display: flex;
 }
 
 #logo{
@@ -58,7 +58,6 @@ h1{
   letter-spacing: 4px;
   color: rgba(192,192,192,0.9);
 }
-
 /************ESTILO DEL BANNER*****************/
 #banner{
   margin-top: 50px;

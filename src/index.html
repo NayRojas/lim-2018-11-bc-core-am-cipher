@@ -9,63 +9,66 @@
   </head>
 
   <body>
-<!--BIENVENIDA AL PROGRAMA-->
-  <header class= "classic-container">
-    <div>
-      <img id="logo" src="images/chip.png" alt="escudo-tipo-logo">
-      <h1 class="icon-lock text-center">ENIGMA 2.0</h1>
-    </div>
-  </header>
-  <main>
-    <section id="banner"><!--Banner introductorio del proyecto-->
-      <img src="images/banner.png" alt="fondo-referencial-con-celular">
-      <div class="classic-container">
-        <h2 class="text-align">Tu privacidad es un derecho que no tiene precio </h2>
-        <p class="text-align"> Somos una empresa sin fines de lucro, nuestra principal motivación es proteger tu información </p>
-      </div>
-    </section>
-    <section id="welcome-to-cipher"><!--Párrafo introductorio al encriptador y pasos-->
-      <h2> Bienvenido al Encriptador de Mensajes Gratuito</h2>
-      <div>
-        <img id="usability-steps" src="images/steps.png" alt="pasos-para-usabilidad">
-      </div>
-    </section>
-  </main>
+    <div class="container">
+      <!--BIENVENIDA AL PROGRAMA-->
+        <header class= "classic-container">
+          <div>
+            <img id="logo" src="images/chip.png" alt="escudo-tipo-logo">
+            <h1 class="icon-lock text-center">ENIGMA 2.0</h1>
+          </div>
+        </header>
+        <main>
+          <section id="banner"><!--Banner introductorio del proyecto-->
+            <img src="images/banner.png" alt="fondo-referencial-con-celular">
+            <div class="classic-container">
+              <h2 class="text-align">Tu privacidad es un derecho que no tiene precio </h2>
+              <p class="text-align"> Somos una empresa sin fines de lucro, nuestra principal motivación es proteger tu información </p>
+            </div>
+          </section>
+          <section id="welcome-to-cipher"><!--Párrafo introductorio al encriptador y pasos-->
+            <h2> Bienvenido al Encriptador de Mensajes Gratuito</h2>
+            <div>
+              <img id="usability-steps" src="images/steps.png" alt="pasos-para-usabilidad">
+            </div>
+          </section>
+        </main>
 
-  <!--INPUTS DEL PROGRAMA (offset, string)-->
-  <section id= "inputs">
-    <div class= "classic-container">
-      <span class="steps" id="steps1">CLAVE</span>
-      <p class="error" id= "empty-offset"></p>
-      <div><!--El usuario introduce el offset-->
-        <input id ="offset" type="number" min="1"  value="" placeholder="Tu número clave aquí..." class ="text-inputs text-align">
-      </div>
-    </div>
-    <div class= "classic-container">
-      <span class="steps" id="steps2">MENSAJE</span>
-      <p class="error" id="empty-string"></p>
-      <div><!--El usuario introduce el mensaje-->
-        <textarea name="message" id="string" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." class ="text-inputs text-align"></textarea>
-      </div>
-    </div>
-<!--BOTONES-->
-    <section>
-      <div id="main-buttons" style="visibility:visible">
-        <!--Aqui el usuario CIFRA-->
-        <button id="encode-button" type="button" name="Cifrar" class="w3-button w3-deep-orange">CIFRAR</button>
-        <!--Aqui el usuario DESCIFRA-->
-        <button id="decode-button"  type="button" name="descifrar" class="w3-button w3-orange">DESCIFRAR</button>
-      </div>
-      <!--Aqui el usuario ESCRIBE NUEVO MENSAJE-->
-      <button id="new-message" type="button" name="borrador-e-inicio" style="visibility:hidden">NUEVO MENSAJE</button>
-    </section>
-  </section>
+        <!--INPUTS DEL PROGRAMA (offset, string)-->
+        <section id= "inputs">
+          <div class= "classic-container">
+            <span class="steps" id="steps1">CLAVE</span>
+            <p class="error" id= "empty-offset"></p>
+            <div><!--El usuario introduce el offset-->
+              <input id ="offset" type="number" min="1"  value="" placeholder="Tu número clave aquí..." class ="text-inputs text-align">
+            </div>
+          </div>
+          <div class= "classic-container">
+            <span class="steps" id="steps2">MENSAJE</span>
+            <p class="error" id="empty-string"></p>
+            <div><!--El usuario introduce el mensaje-->
+              <textarea name="message" id="string" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." class ="text-inputs text-align"></textarea>
+            </div>
+          </div>
+      <!--BOTONES-->
+          <section>
+            <div id="main-buttons" style="visibility:visible">
+              <!--Aqui el usuario CIFRA-->
+              <button id="encode-button" type="button" name="Cifrar" class="w3-button w3-deep-orange">CIFRAR</button>
+              <!--Aqui el usuario DESCIFRA-->
+              <button id="decode-button"  type="button" name="descifrar" class="w3-button w3-orange">DESCIFRAR</button>
+            </div>
+            <!--Aqui el usuario ESCRIBE NUEVO MENSAJE-->
+            <button id="new-message" type="button" name="borrador-e-inicio" style="visibility:hidden">NUEVO MENSAJE</button>
+          </section>
+        </section>
 
-<footer>
-  <div id="footer">
-    <p>Copyright © Todos los Derechos Reservados - Programa de concientización sobre privacidad de la información</p>
-  </div>
-</footer>
+      <footer>
+        <div id="footer">
+          <p>Copyright © Todos los Derechos Reservados - Programa de concientización sobre privacidad de la información</p>
+        </div>
+      </footer>
+    </div>
+
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>
